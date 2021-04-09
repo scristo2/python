@@ -1,0 +1,10 @@
+#cada vez que s eha ga un generador se necesita yield
+def generador():
+
+    for i in range(100):
+
+       yield i + 5
+
+
+for i in generador():
+    print(i)

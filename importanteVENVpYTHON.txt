@@ -1,0 +1,4 @@
+#cuando he activado el venv de python,en visual studio me dice que tengo que habilitar los scripts en power shell
+porque de aviso en rojo,pongo aqui la url del video para activarla https://www.youtube.com/watch?v=zUszm-f6Xq4
+
+por el momento no esta activado,lo corro desde la terminal por seguridad,se usa isual estido solo para escribir

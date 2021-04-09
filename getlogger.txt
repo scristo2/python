@@ -1,0 +1,5 @@
+log = logging.getLogger(__file__)
+logging.basicConfig(filename='errorsCripto.log', format="%(asctime)s %(name)s %(message)s")
+
+log.warning('mensaje de error')
+log.debug()....

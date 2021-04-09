@@ -1,0 +1,9 @@
+#eliminar caracteres de una cadena
+
+x = '¿me preguntaba si pudirea poner un *?'
+
+y = x.strip('¿*?')
+
+<<<<<<<print(y)
+
+me preguntaba si pudiera poner un 

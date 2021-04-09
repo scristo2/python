@@ -1,0 +1,91 @@
+
+#check empty dictionary
+
+arreglo = {}
+
+res = bool(arreglo)
+
+
+<<<print(res)
+
+True
+
+
+#add to dictionary
+
+x = {}
+
+x['ip'] = "262783"
+
+print(x)
+
+
+#EMPAREJA LAS TUPLAS, SI HAY IMPARES LA OLVIDA
+
+a = ("John", "Charles", "Mike", "JUAN)
+b = ("Jenny", "Christy", "Monica")
+
+x = zip(a, b)
+
+print(tuple(x))
+
+<<<<<<< (('JOHN', 'JENNY), (CHARLES, CHRISTY), ('MIKE, MONICA))
+
+
+
+-------------
+
+
+arreglo = [4,5,6,7,8,9]
+
+arreglo.insert(0, 1)
+
+<<<<<print(arreglo)
+1,4,5,6,7,8,9
+--------------
+#cuando son dictionary acordarse de items()
+
+array = {}
+
+adds = {'primero' : 'hello world'}
+
+array.update(adds)
+
+print(array['primero'])
+
+x = {1, 2, 3}
+y = {1,2,3,4,5,6}
+
+z = x.issubset(y)
+
+print(z) true porque en l ay estan todos los numeros de la x, esta funcion only en dictionay
+
+
+-------------------------------
+
+
+
+day = datetime.now().day
+        month = datetime.now().month
+        year = datetime.now().year
+
+        hour = datetime.now().hour
+        minute = datetime.now().minute
+        second = datetime.now().second
+
+        dateComplete = datetime.now()
+
+        arreglo = {
+
+            'day' : day,
+            'month' : month,
+            'year' : year,
+            'hour' : hour,
+            'minute' : minute,
+            'second' : second,
+            'dateComplete' : dateComplete
+        }
+
+for i,x in self.__GetDate().items():
+
+            print(x)  

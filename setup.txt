@@ -1,0 +1,16 @@
+from distutils.core import setup, Extension
+import py2exe
+
+
+setup(
+      
+      name='source',
+      version='0.0.1',
+      packages=['interface','source'],
+      py_modules=['script','interface\__main__','source\__main__'],
+      console = ['script.py'],
+      zip_safe=False
+    )
+
+
+python setup.py py2exe

@@ -1,0 +1,7 @@
+#
+
+os.system('cls')
+
+result = sys.stdin.readline() #input
+
+sys.stdout.write(f'hay que hacer {result}') #print()

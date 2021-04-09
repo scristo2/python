@@ -1,0 +1,5 @@
+# al añadir o insertar acordarse de las dobles barras
+
+import sys
+
+sys.path.append('//')

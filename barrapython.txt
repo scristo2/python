@@ -1,0 +1,27 @@
+pip install progress
+https://python-para-impacientes.blogspot.com/2018/04/barras-de-progreso-helices-y-contadores.html
+
+from progress.bar import Bar, ChargingBar
+import os, time, random
+
+# Declara un objeto de la clase Bar(). En cada ciclo la barra
+# muestra una porción hasta llegar a su máxima longitud en el 
+# ciclo 20. La barra se representa con el carácter #
+
+bar1 = Bar('Procesando:', max=20)
+for num in range(20):
+    time.sleep(0.2)
+    bar1.next()
+bar1.finish()
+
+
+# Declara un objeto de la clase ChargingBar(). Cuando comienza
+# el bucle aparece una barra punteada y durante los ciclos los 
+# puntos "∙" son sustituidos por el carácter "█" hasta alcazar
+# el 100%.
+
+bar2 = ChargingBar('Instalando:', max=100)
+for num in range(100):
+    time.sleep(random.uniform(0, 0.2))
+    bar2.next()
+bar2.finish()

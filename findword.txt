@@ -1,0 +1,8 @@
+#find word, si es -1 no esta, si no es -1 si esta ese string
+
+texto = "soy programador"
+
+if texto.find('soy') != -1:
+    print('si esta')
+else:
+    print('no esta')    

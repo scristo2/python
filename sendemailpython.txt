@@ -1,0 +1,41 @@
+import smtlib as ema
+from email.message import Emailmessage
+from email.util import make_msgid
+
+emisor = ""
+receptor = ""
+
+message = Emailmessage()
+messge.set_content('')
+message['Subject']=''
+message['From']=''
+message['To'] = ''
+message['Message-ID'] = make_msgid()
+
+try:
+
+server = ema.SMTP('smtp.live', 25) #en este caso es porque es hotmail
+server.starttls()#encriptta tus dstos y mensaje de envio, es por seguridad
+server.login(username, password) from your email
+
+except ema.SMTPAuthenticationError as err:
+    pass
+
+except ema...... as err
+
+    pass 
+
+
+except ema..... as err:
+    
+    pass
+
+
+poner todo los except
+
+else:
+
+server.send_message(message)
+server.quit#ciera conexion con el servidor smtp
+
+

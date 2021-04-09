@@ -1,0 +1,5 @@
+texto = "     ajjaopa"
+
+x = texto.rstrip()
+
+<<<<"ajjapoa" elimina espacios en blanco

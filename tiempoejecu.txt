@@ -1,0 +1,9 @@
+#tiempo de ejecucion de un script
+
+import time
+
+initial = time.time()
+
+<<<<<<main()
+
+print('ha tardado, time.time() - initial, 'segundos')

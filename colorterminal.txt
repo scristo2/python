@@ -1,0 +1,9 @@
+#color terminal text
+
+#segun la doc de colorama,para que funcione mejor en window que estos dos mudos vayan importados juntos
+from colorama import Fore, Back, Style
+from termcolor import colored
+
+
+os.system('cls')
+print(colored('hola beba','blue')) #si pones un tercer parammetro espara darle un color de fondo al texto

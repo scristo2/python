@@ -1,0 +1,127 @@
+#https://scotch.io/tutorials/an-introduction-to-regex-in-python
+#la r es para que la barra \no cambie de reglon
+import re
+
+ss = "holaz2345"
+
+result = re.search(r"[0-9][0-9][0-9][0-9]", ss)
+
+<<<<print(result.group(0)) 2345
+
+
+
+
+--------------------
+texto = "hola me llamo ???"
+
+resu = re.search(r"(\w+) (\w+) (\w+) (\W+)", texto)
+
+print(resu.group(4)) -- ???
+
+
+
+-----------
+
+re.match()->busca coincidencia solo al principio de la cadena PERO SOLO ENCRUENTRA UNA, SI HAY MAS DE UNA SE PARA CUANDO ENCUENTRA LA PRIMERA
+re.search()->busca coincidencia en cualquier parte de la cadena PERO SOLO ENCUENTRA UNA, SI HAY MAS DE UNA SE PARA CUANDO ENCUENTRA LA PRIMERA
+
+x = "a233"
+
+resu = re.search(r"^[a-z][0-9]", x)
+
+spli = "jhon doe
+lana marcafur 
+chin due
+"
+re.split(r"\n+", spli)-> <<<['jhon doe, 'lana marcarfur', 'chin due'] # leer cada linea y dividirlae en matrices despues d e lo mal colocado qu eesta el string
+
+re.findall()->encuentra todas las coincidencias
+
+--#sustituye
+pattern = re.compile(r"[0-9]+")
+result = pattern.sub("__", "there is only 1 thing 2 do")
+<<<<print() ----- there is only __ thing __ do
+
+
+a(?=b) ->quiere decir que despues de la a tine que venir una b
+
+pattern = re.compile(r'\w+(?=\sfox)') ->en este caso despues de un character tien eque ir in esspacio(\s y la palabra fox)
+result = pattern.search("The quick brown fox") 
+print result.group() # prints 'brown'
+
+texto = '<td bgcolor="#99CC99">1-ene</td>'
+
+resu = re.search(r"^\W\w+(?=\sbgcolor)\W", texto)
+
+
+#escape con caracteres especiales
+
+pattern = re.compile('\\\\')
+result = pattern.match("\\author")
+print result.group()    # will print \
+
+
+--------------------- 
+
+texto = "<html></html>"
+
+result = re.search(r"^<html>", texto, re.MULTILINE)
+
+<<<<<print(result.group())
+
+result = re.search(r"</html>$", texto, re.MULTILINE)
+
+#que acaba con un </html>
+
+--<html>
+
+texto = "<html></html>"
+
+result = re.search(r"^\W", texto, re.MULTILINE)
+
+print(result.group())
+
+-------------------
+
+text = "<td class=modelo-1></td>
+result = re.match(r".\w\w\s\w{4}\w.\w+.\d...\w\w\w", text)
+
+or re.compile(r".\w\w\s\w{4}\w.\w+.\d...\w\w\w")
+result = re.match(text)
+
+if match:
+
+  print('coincide')
+
+else:
+
+   print('no coincide')
+
+-------------------------------------------
+
+
+.	Este elemento coincide con cualquier carácter excepto \ n
+\re	Esto coincide con cualquier dígito [0-9]
+\RE	Esto coincide con caracteres que no son dígitos [^ 0-9]
+\ s	Esto coincide con el carácter de espacio en blanco [\ t \ n \ r \ f \ v]
+\ S	Esto coincide con el carácter que no es un espacio en blanco [^ \ t \ n \ r \ f \ v]
+\ w	Coincide con el carácter alfanumérico [a-zA-Z0-9_]
+\ W	Coincide con cualquier carácter no alfanumérico [^ a-zA-Z0-9]
+
+-------------------------
+
++	uno o mas	\ w +	ABCDEF097
+{2}	exactamente 2 veces	\ d {2}	01
+{1,}	una o más veces	\ w {1,}	sonriente
+{2,4}	2, 3 o 4 veces	\ w {2,4}	1234
+*	0 o más veces	A * B	AAAAB
+?	una vez o ninguna (vago)	\ d +?	1 en 12345
+
+   -----
+
+Puntos a tener en cuenta:
+
+** [0-9] es lo mismo que [0123456789] **
+\ d es la abreviatura de [0-9]
+\ w es la abreviatura de [a-zA-Z0-9]
+[7-9] es lo mismo que [789]

@@ -1,0 +1,6 @@
+from bs4 import beautifulsoup4
+soup = BeautifulSoup(requests.get(self.__url, headers=self.__header).text, 'html.parser')
+
+        result = soup.find('td',{'id' : 'djd'}, text='hola') #te busca el id con el id tal y con el txt ese
+
+        print(result)

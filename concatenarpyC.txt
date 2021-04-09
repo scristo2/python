@@ -1,0 +1,8 @@
+
+x = 3
+
+y = 'se han tardado %s segundos' %x
+
+<<<<<<print(y)
+
+se han tardado 3 segundos

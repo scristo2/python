@@ -1,0 +1,18 @@
+with open('C:\\Users\\USUARIO\\Desktop\\virtual1\\requirements.txt','a') as text:
+
+    text.write('creo que esto es la ostia')
+
+    for i in text:
+        print(i)
+
+    text.close()    
+
+
+
+'r'	Abra un archivo para leerlo. (defecto)
+'w'	Abra un archivo para escribir. Crea un archivo nuevo si no existe o lo trunca si existe.
+'x'	Abra un archivo para creación exclusiva. Si el archivo ya existe, la operación falla.
+'a'	Abrir para agregar al final del archivo sin truncarlo. Crea un nuevo archivo si no existe.
+'t'	Abrir en modo texto. (defecto)
+'b'	Abrir en modo binario.
+'+'	Abrir un archivo para actualizar (leer y escribir)

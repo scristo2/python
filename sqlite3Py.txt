@@ -1,0 +1,59 @@
+import sqlite3
+#ya viene instalado en el pip
+
+def __Datasqlite(self, *args):
+
+        response = None
+
+        try:
+
+            conn = sqlite3.connect('loterias')
+
+            curso = conn.cursor()
+
+            curso.execute("CREATE TABLE IF NOT EXISTS bonoloto (fecha)")
+
+            if args[0] == 'insert':
+
+                curso.execute('INSERT INTO bonoloto (fecha) VALUES(?)', (self.__GetDate()['dbday'],))
+
+                response = 'insertado'
+
+
+            elif args[0] == "findDate":
+
+                curso.execute("SELECT * FROM bonoloto WHERE fecha= ? ", (self.__GetDate()['dbday'],))
+
+                result = curso.fetchall()
+
+                if len(result) > 0:
+
+                    response = "resultados"
+
+                else:
+
+                    response = 'no hay resultados'          
+
+
+            conn.commit()    
+
+            conn.close()
+
+
+        except sqlite3.Error as err:
+
+            if str(err).find('such') != -1:
+
+                log.warning('Esa tabla no existe en la base de datos o no hay resultados en la busqueda de la tabla')
+
+            elif str(err).find('sintax'):
+
+                log.warning(err)
+
+            else:
+
+                log.warning(err)
+
+        
+
+        return response   

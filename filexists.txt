@@ -1,0 +1,9 @@
+import os
+#file or directory
+if os.path.exists('source') is True:
+
+    print('si exiiste')
+
+else:
+
+    print('¡no existe')

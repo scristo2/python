@@ -1,0 +1,6 @@
+#install paquete en shell
+
+py -m pip install camelcase
+
+#desistalar
+py -m pip uninstall camelcase

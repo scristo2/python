@@ -1,0 +1,2 @@
+#ver todos los paquetes instalados en la terminal
+py -m pip list

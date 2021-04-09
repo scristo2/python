@@ -1,0 +1,8 @@
+
+#MUY IMPORTANTE EN LA TERMINAL CODIGO SOURCE EN CPANEL APP PYTHON COPIAR
+
+#django,en l aterminal cpanel instalamos django
+pip install django
+
+#para que se creen los ficheros,iniamos django
+djngo-admin startproject proyect .

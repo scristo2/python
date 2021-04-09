@@ -1,0 +1,13 @@
+
+protocol = 'https:/'
+url = 'molestator.com'
+uri = 'index'
+
+<<<<<print('{protocol}', {url}, {uri}, sep='/ or lo que quieras')
+
+https://molesttaor.com/index
+
+timeExe = 7
+
+<<<<<print('Se ha tardado en restablecer la conexion con el internet %s segundos' %timeExe)
+

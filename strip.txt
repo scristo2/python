@@ -1,0 +1,17 @@
+
+1. strip () : - Este método se utiliza para eliminar todos los caracteres iniciales y finales mencionados en su argumento.
+
+2. lstrip () : - Este método se utiliza para eliminar todos los caracteres iniciales mencionados en su argumento.
+
+
+
+3. rstrip () : - Este método se utiliza para eliminar todos los caracteres finales mencionados en su argumento.
+
+
+
+x = "   hola sergio"
+
+print(x.strip()) print
+
+
+elimina los espacios en blanco de una cadena

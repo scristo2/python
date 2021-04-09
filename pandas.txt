@@ -1,0 +1,60 @@
+import pandas as pd 
+
+##cuando en notebook cree o lea csv pon sep=";"
+
+
+values = [[2,11,15,23,33,49], [10, 21, 30, 33, 47, 49]]
+index = ['25_01_2021', '26_01_2021']
+columns = ['primero', 'segundo', 'tercero', 'cuarto', 'quinto', 'sexto']
+
+df = df.DataFrame(values, index = index, columns = columns)
+df = df.DataFrame(values, index = index, columns = columns)
+
+#importante
+
+print(len(df.iloc[0, :])) me da el numero de primeros que hay en la fila 0 es decir, del dia 25
+
+print(df.loc['25_01_2021':, ['cuarto']]) 'te da el cuarto del dia 25'
+print(df.loc[:, ['primero']]) 'te da todos los primeros de todos de los dos dia que hay por los :
+print(df.loc['25_01_2021':, ['quinto', 'sexto']]) te da el quinto y el sexto de los dos dias por los :
+print(df)
+
+  ----todos
+
+  df.loc['tercero', :]  ---te da todos los terceros
+  df.loc['25_01_2021':, ['tercero', 'segundo']]
+  df.loc[:]['cuarto'].sum() suma todos los cuartos de todas las columnas
+
+-------
+
+print(df.loc[df['primero'] == 10, ['sexto']]) # si en el primero de cualquier fecha hay un 10 imprime  el sexto de l afecha que tenga como primero el 10 
+
+#more condition here (and) is & and (or) is |
+
+print(df.loc[(df['25_01_2021'] == 11) & (df['26_01_2021'] <= 19), ['25_01_2021', '26_01_2021']])
+
+-----------------------------
+sum()
+print(df.loc['tercero', ['25_01_2021', '26_01_2021']].sum())
+print(df.loc['tercero', :].sum())
+df.loc[:]['cuarto'].sum()
+
+#.values
+#.shape te dice cuantas columnas y filas hay, ejemplo pd.shape sin ()
+#.info()
+#.head()
+#iloc() for index with int 
+#loc() ej pd.loc[:, ['25_01_2021']]
+#.sum()
+
+---------------------------------------
+
+melt() hace la tabla a lo largo debe a lo ancho
+
+pew = pd.DataFrame(values, index=index, columns = columns)
+
+print(pew)-->para ver lo en ancho y comparar luego con lo de abajo
+
+xx = pd.melt(pew, id_vars=['primero'], value_vars=['sexto'])
+
+print(xx)

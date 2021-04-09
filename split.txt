@@ -1,0 +1,25 @@
+#separar un texto en array con palabras por espacio
+
+texto = 'mi nombre es sergio'
+separado = texto.split()
+<<<<['mi', 'nombre', 'es', 'sergio]
+
+#el contario es join()
+
+arreglo = ['primero', 'segundo', 'tercero']
+
+cadena = ' '.join(arreglo)
+
+print(cadena)
+
+<<<<<< primero segundo tercero
+
+#tambien si le pones una coma
+
+arreglo = ['primero', 'segundo', 'tercero']
+
+cadena = ','.join(arreglo)
+
+print(cadena)
+
+<<<<<<< primero,segundo,tercero

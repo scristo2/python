@@ -1,0 +1,33 @@
+##subprocess tambien lo hace al igual que os,pero lo puedes pasar a string y verificar lo que hace
+
+import os 
+import sys 
+import time
+import subprocess
+
+def CheckRouter():
+
+    batcmd = "netsh wlan show network mode=bssid"
+    result = subprocess.check_output(batcmd, shell=True)
+    aa = str(result)
+
+    if aa.find('Actualmente hay') != -1:
+        print('si hay redes disponibles,por lo cual el wifi si funciona, voy a conectarme la ultima red',
+        'wifi que te conectaste')
+        
+        #sleep because maybe off router or something
+
+        time.sleep(5)
+
+        result1 = subprocess.check_output('netsh wlan connect name=CASA')
+        result1_string = str(result1)
+
+        if result1_string.find('correctamente') != -1:
+            print('ya estas conectado a internet')
+
+        else:
+            print('Ha ocurrido un error, no estas conectado')    
+
+
+    else:
+        print('no hay redes disponibles,es problema del router')    

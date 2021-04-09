@@ -1,0 +1,15 @@
+
+aa = '3'
+
+bb = "tiene %s caramelos" % aa
+
+<<<<<<<print(bb)
+
+tiene 3 caramelos
+
+x = 'tengoo 27 años'
+y = f'{x}'
+
+<<<<print(y)
+
+tengo 27 años

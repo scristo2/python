@@ -1,0 +1,8 @@
+import schedule
+
+schedule.every(1).minutes.do(command.CheckRouter)
+
+             while True:
+
+                 schedule.run_pending()
+                 time.sleep(4)

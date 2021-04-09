@@ -1,0 +1,47 @@
+import mysql.connector
+from mysql.connector import errorcode
+
+conn = mysql.connector.connect(username=self.__username, password=self.__passw, host=self.__host, database= self.__db)
+
+curso = conn.cursor()
+
+ name = self.__GetDate()['dbday']
+
+ sql1 = "CREATE TABLE IF NOT EXISTS %s (id INT(9) AUTO_INCREMENT, primero VARCHAR(65) NOT NULL, segundo VARCHAR(65) NOT NULL, tercero VARCHAR(65) NOT NULL, cuarto VARCHAR(65) NOT NULL, quinto VARCHAR(65) NOT NULL, sexto VARCHAR(65) NOT NULL, PRIMARY KEY (id))" %name
+
+ curso.execute(sql1)
+
+ tupla = (name, 'NULL', resultScrapping[0], resultScrapping[1], resultScrapping[2], resultScrapping[3], resultScrapping[4], resultScrapping[5],)
+
+ sql2 = "INSERT INTO %s (id, primero, segundo, tercero, cuarto, quinto, sexto) VALUES (%s, %s, %s, %s, %s, %s, %s)" %tupla
+
+                    
+ curso.execute(sql2)
+
+ response = 'insertado diario'
+
+ tupla2 = (resultScrapping[0], resultScrapping[1], resultScrapping[2], resultScrapping[3], resultScrapping[4], resultScrapping[5],)
+
+print('Acabas de insertar los numeros ganadores %s %s %s %s %s %s' %tupla2)
+
+
+conn.commit()
+conn.close()
+
+
+try;
+
+
+except mysql.connector.Error as err:
+
+                if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+
+                    log.warning('Error en las credenciales o el host no permite conexiones remotas')
+
+                elif err.errno == errorcode.ER_BAD_DB_ERROR:
+
+                    log.warning('La base de datos %s no existe' %(self.__db,))
+
+                else:
+
+                    log.warning(err)                         

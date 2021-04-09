@@ -1,0 +1,6 @@
+import request 
+
+url = "https://serveratlantic.com"
+vara = {'nombre' : 'sergio'}
+response = requests.get(url, data=vara, timeout=5)
+print(response)

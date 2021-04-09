@@ -1,0 +1,20 @@
+import random
+
+def generador():
+
+    for i in range(27):
+
+        yield i 
+
+
+
+arreglo = []
+
+for i in generador():
+
+    arreglo.append(i)
+
+
+random.shuffle(arreglo)
+
+print(arreglo[7])

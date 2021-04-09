@@ -1,0 +1,13 @@
+from datetime impor datetime or import datetime as dt etc
+hour = datetime.now().hour
+minute = datetime.now().minute
+day = datetime.now().day
+
+today = datetime.now()
+
+daystr = today.strftime('%A')
+
+<<<<print(daystr)
+
+friday
+

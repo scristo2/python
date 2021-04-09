@@ -1,0 +1,6 @@
+#python manage.py collectstatic
+
+MEDIA_URL = '/media/'
+STATICFILES_DIRS=[BASE_DIR + "/assets",]
+STATIC_ROOT='/home/#user/public_html/static' //lo que hace es crear los directrios fijos en public html.
+MEDIA_ROOT='/home/#user/public_html/media'

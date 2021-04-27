@@ -1,0 +1,19 @@
+try:
+
+       response = requests.get('https://orfibsAaesa.com',timeout=5)
+
+    except requests.ConnectionError as err:   
+    
+        print('no tienes conexion')
+    
+    except requests.Timeout as err:
+
+        print('error al conectar con el servidor')
+
+    except requests.TooManyRedirects as err:
+
+        print('el servidor ha redigirgido demasidas veces')
+
+    except requests.HTTPError as err:
+
+        print('invalida respuesta del protocolo http') 

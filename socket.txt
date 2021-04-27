@@ -1,0 +1,34 @@
+#dos archivos
+
+servidor.py
+cliente.py
+
+----servidor.py
+import socket
+
+mysocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+mysocket.bind((socket.gethostname(),8000))
+mysocket.listen(5)
+
+while True:
+    conexxion, addr = mysocket.accept()
+    print('nueva conexion establecida')
+    print(addr)
+    peticion = conexxion.recv(102400)
+    print(peticion.decode())
+    message = "hola soy el servidor" 
+    conexxion.send(message.encode())
+mysocket.close()
+
+--cliente
+import socket
+import time
+from PIL import Image
+mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysocket.connect((socket.gethostname(),8000))
+mensaje = 'hol amundo'
+mysocket.send(mensaje.encode())
+respuesta = mysocket.recv(1024)
+print(respuesta)
+time.sleep(2)
+mysocket.close()

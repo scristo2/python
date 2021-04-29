@@ -1,0 +1,28 @@
+class persona:
+
+    def __init__(self):
+
+        self.saludar()
+
+
+
+    def saludar(self):
+
+        print('me llamo sergio')
+
+
+
+class animal(persona):
+
+    def saludar(self):
+
+        print('soy un animal')
+        super(animal, self).saludar()
+
+person = persona()
+anima = animal()
+
+<<<<<<<<<<<<<<<<
+me llamo sergio
+soy un animal
+me llamo sergio

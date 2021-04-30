@@ -14,7 +14,7 @@ def createmenu(self):
         second = Menu(menubar, tearoff=0)
         second.add_command(label='editar', command=self.test)#sin los parentesis en la funcion
         second.add_separator()
-        second.add_command(label='copiar')
+        second.add_command(label='copiar', command=self.quit) #cerrarr el programa por ejemplo en esta pestaña del menu
 
         menubar.add_cascade(label='inicio', menu=first)
         menubar.add_cascade(label='second', menu=second)

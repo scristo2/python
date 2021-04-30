@@ -1,0 +1,20 @@
+from tkinter import *
+
+def createmenu(self):
+
+        menubar = Menu(self)
+        self.master.configure(menu=menubar)
+
+
+        first = Menu(menubar, tearoff=0)
+        first.add_command(label='Nuevo')
+        first.add_separator()
+        first.add_command(label='ABRIR')
+        
+        second = Menu(menubar, tearoff=0)
+        second.add_command(label='editar', command=self.test)#sin los parentesis en la funcion
+        second.add_separator()
+        second.add_command(label='copiar')
+
+        menubar.add_cascade(label='inicio', menu=first)
+        menubar.add_cascade(label='second', menu=second)

@@ -1,3 +1,12 @@
 from tkinter import messagebox
 
 messagebox.showinfo(message='mi primer texto',title='advertencia')
+
+#question dialog message
+def test(self):
+
+        answer = messagebox.askquestion(title='AVISO', message='estas seguro que desea cerrar el programa???')
+
+        if answer == 'yes':
+
+            self.quit()

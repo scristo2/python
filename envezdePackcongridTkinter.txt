@@ -1,0 +1,15 @@
+labelframe = LabelFrame(self, text="Login:")
+labelframe.pack(fill="both", expand="yes")
+ 
+left = Label(labelframe, text="Nombre de usuario:")
+left.grid(column=0, row=0, padx=5, pady=10)
+
+enter = tk.Entry(labelframe)
+enter.grid(column=1, row=0, padx=5, pady=10)
+
+password = Label(labelframe, text='Contraseña:')
+password.grid(column=0, row=1, padx=5, pady=10)
+
+enterpassword = tk.Entry(labelframe)
+enterpassword.grid(column=1, row=1, padx=5, pady=10)
+enterpassword.configure(show='*')

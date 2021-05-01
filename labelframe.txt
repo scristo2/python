@@ -1,0 +1,4 @@
+ labelframe = LabelFrame(self, text="This is a LabelFrame")
+ labelframe.pack(fill="both", expand="yes")
+ left = Label(labelframe, text="Inside the LabelFrame")
+ left.pack()

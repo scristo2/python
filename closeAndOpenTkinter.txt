@@ -1,0 +1,20 @@
+def test():
+
+    window.destroy()
+    window2 = tk.Tk()
+    window2.title('segunda ventana')
+    window2.geometry('500x500')
+    frame2 = principal.main.frame2(master=window2)
+    window2.mainloop()
+
+
+window = tk.Tk()
+window.title('behindGate')
+window.geometry('500x600')
+window.minsize(500,500)
+
+frame1 = principal.main.frame(master=window)
+
+button = tk.Button(window, text='click me', command=test)
+button.pack(side=BOTTOM)         
+window.mainloop()

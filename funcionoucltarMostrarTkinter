@@ -1,0 +1,10 @@
+def test():
+
+    if frame1.winfo_ismapped():
+
+        frame1.pack_forget()
+
+    else:
+
+        frame1.pack(fill=tk.BOTH, expand='yes')
+        frame1.configure(background='black')

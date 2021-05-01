@@ -1,3 +1,4 @@
+#acordarse si se ha usuadopack, si se ha usuado grid, pues grid forget etc
 def test():
 
     if frame1.winfo_ismapped():

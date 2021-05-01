@@ -1,0 +1,5 @@
+%s - Cadena (O cualquier objeto, como los números al representarlos en una cadena de texto)
+%d - Integrales
+%f - Números de punto flotante
+%.<numero de digitos>f - Números de punto flotante con una cantidad de números fijos a la derecha del punto.
+%x/%X - Integral con representacion hex (minúscula/mayúscula)

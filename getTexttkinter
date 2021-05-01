@@ -1,0 +1,20 @@
+#imprtaante el self 
+class frame(tk.Frame):
+
+    def __init__(self,master=None):
+        super().__init__(master)
+        self.master = master
+        self.pack(fill=tk.BOTH, expand='yes')
+        self.configure(background="#000000")
+        self.title()
+
+
+    def title(self):
+
+        self.enter = tk.Entry(self)
+        self.enter.pack()
+
+
+    def sss(self):
+
+        return self.enter.get()    

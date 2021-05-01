@@ -1,0 +1,5 @@
+command = lambda social: social +  10
+
+print(command(20))
+
+<<<<< 30

@@ -1,0 +1,8 @@
+window = tk.Tk()
+window.title('behindGate')
+w = 500
+x = 500
+y= (window.winfo_screenwidth() / 2) - ( w / 2)
+z = (window.winfo_screenheight() / 2) - (x / 2)
+window.geometry('%dx%d+%d+%d' % (w,x,y,z))
+window.minsize(500,500)

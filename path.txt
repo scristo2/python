@@ -3,3 +3,10 @@ from os import path
 pat = os.path.abspath(path.join(path.dirname(__file__),'jajaj.txt'))
 
 print(pat)
+
+
+
+//from pathlib import Path
+path = __file__
+result = path.parent.absolute()
+<<<<<<home directory

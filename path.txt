@@ -1,7 +1,8 @@
+
 import os
 from os import path 
 pat = os.path.abspath(path.join(path.dirname(__file__),'jajaj.txt'))
-
+#te de forma elegante la ruta que has escrtito,recordar,que path.join une,no hace falta / no que exista
 print(pat)
 
 

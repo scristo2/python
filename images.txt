@@ -1,3 +1,5 @@
+#upload images tkinter abajo del todo
+
 import os
 import sys
 import subprocess
@@ -32,4 +34,13 @@ def main():
     new_pic = ImageTk.PhotoImage(resize)
     label = tk.Label(window, image=new_pic)
     label.pack()
-    window.mainloop()  
+    window.mainloop()
+    
+    #upload images tkinter
+    import PIL.ImageTk
+import PIL.Image
+from tkinter.filedialog import askopenfile
+
+filename = askopenfile(title='elije una foto de perfil',mode='r', filetypes=[('Solo imagenespython script.py', ['.jpg'])]) #solo imagenes python es el texto que leerean y luego se ponen los foramotos que pueden subir
+images = PIL.Image.open(filename.name)
+images.save(os.path.abspath(os.path.join(os.path.dirname(__file__), 'images' ,'images.jpg'))) #se guarda en la ruta y con el nombre que quieras

@@ -1,6 +1,10 @@
 
 import os
-from os import path 
+from os import path
+
+#pathImage = os.path.abspath(os.path.join(os.path.dirname(__file__), 'images', 'orfibesa.png')) 
+<<<<C:\Users\USUARIO\Desktop\env-tkinter\source\images\orfibesa.png
+
 pat = os.path.abspath(path.join(path.dirname(__file__),'jajaj.txt'))
 #te de forma elegante la ruta que has escrtito,recordar,que path.join une,no hace falta / no que exista
 print(pat)

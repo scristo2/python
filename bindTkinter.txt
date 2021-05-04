@@ -1,0 +1,45 @@
+#leer abajo los <> para la funcion, el ejemplo de abajo es para response 
+from tkinter import *
+ 
+
+def motion(event):
+    msg.configure(width=master.winfo_width())
+master = Tk()
+whatever_you_do = "Whatever you do will be insignificant, but it is very important that you do"
+msg = tk.Button(text='test')
+msg.configure(bg='red')
+msg.bind('<Configure>',motion)
+msg.pack()
+mainloop()
+
+
+
+<Button>	Se presiona un botón del mouse con el puntero del mouse sobre el widget. La parte de detalle especifica qué botón, por ejemplo, el botón izquierdo del mouse está definido por el evento <Button-1>, el botón central por <Button-2> y el botón más a la derecha del mouse por <Button-3>.
+       <Button-4> define el evento de desplazamiento hacia arriba en ratones con soporte de rueda y <Button-5> el desplazamiento hacia abajo.
+       Si presiona el botón del mouse sobre un widget y lo mantiene presionado, Tkinter automáticamente "agarrará" el puntero del mouse. Se enviarán más eventos del mouse, como los eventos Motion y Release, al widget actual, incluso si el mouse se mueve fuera del widget actual. La posición actual, relativa al widget, del puntero del mouse se proporciona en los miembros xey del objeto de evento pasado a la devolución de llamada. Puede usar ButtonPress en lugar de Button, o incluso dejarlo completamente fuera:, y <1> son sinónimos.
+
+<Motion>	El ratón se mueve manteniendo pulsado un botón del ratón. Para especificar el botón izquierdo, medio o derecho del mouse, use <B1-Motion>, <B2-Motion> y <B3-Motion> respectivamente. La posición actual del puntero del mouse se proporciona en los miembros xey del objeto de evento pasado a la devolución de llamada, es decir, event.x, event.y
+
+<ButtonRelease>	Evento, si se suelta un botón. Para especificar el botón izquierdo, medio o derecho del mouse, use <ButtonRelease-1>, <ButtonRelease-2> y <ButtonRelease-3> respectivamente. La posición actual del puntero del mouse se proporciona en los miembros xey del objeto de evento pasado a la devolución de llamada, es decir, event.x, event.y
+
+<Double-Button>	Similar al evento Botón, ver arriba, pero se hace doble clic en el botón en lugar de un solo clic. Para especificar el botón izquierdo, medio o derecho del mouse, use <Double-Button-1>, <Double-Button-2> y <Double-Button-3> respectivamente.
+Puede utilizar Double o Triple como prefijos. Tenga en cuenta que si enlaza con un solo clic (<Button-1>) y un doble clic (<Double-Button-1>), se llamarán a ambos enlaces.
+
+<Enter>	El puntero del mouse entró en el widget.
+Atención: ¡Esto no significa que el usuario haya presionado la tecla Enter !. <Return> se utiliza para este propósito.
+
+<Leave>	El puntero del mouse salió del widget.
+
+<FocusIn>	El foco del teclado se movió a este widget, o a un hijo de este widget.
+
+<FocusOut>	El foco del teclado se movió de este widget a otro widget.
+
+<Return>	El usuario presionó la tecla Enter. Puede enlazar a prácticamente todas las teclas del teclado: las teclas especiales son Cancelar (la tecla Pausa), Retroceso, Tabulador, Retorno (la tecla Intro), Shift_L (cualquier tecla Shift), Control_L (cualquier tecla Control), Alt_L (cualquier tecla Tecla Alt), Pausa, Bloq Mayús, Escape, Anterior (Página arriba), Siguiente (Página abajo), Fin, Inicio, Izquierda, Arriba, Derecha, Abajo, Imprimir, Insertar, Eliminar, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, Num_Lock y Scroll_Lock.
+
+<Key>	El usuario presionó cualquier tecla. La clave se proporciona en el miembro char del objeto de evento que se pasa a la devolución de llamada (esta es una cadena vacía para claves especiales).
+
+a	El usuario escribió una tecla "a". La mayoría de los caracteres imprimibles se pueden utilizar tal cual. Las excepciones son el espacio (<espacio>) y menos que (<menos>). Tenga en cuenta que 1 es un enlace de teclado, mientras que <1> es un enlace de botón.
+
+<Shift-Up>	El usuario presionó la flecha hacia arriba, mientras mantenía presionada la tecla Shift. Puede utilizar prefijos como Alt, Mayús y Control.
+
+<Configure>	El tamaño del widget cambió. El nuevo tamaño se proporciona en los atributos de ancho y alto del objeto de evento pasado a la devolución de llamada. En algunas plataformas, puede significar que la

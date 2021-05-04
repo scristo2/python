@@ -1,0 +1,3 @@
+https://docs.python.org/3/library/dialog.html
+from tkinter.simpledialog import askstring
+text = askstring('haber que sale', 'susussu')

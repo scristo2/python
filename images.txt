@@ -6,6 +6,11 @@ if __name__ == "__main__":
 
     img = Image.open("geofisica.jpg")
     img.show()
+    
+    
+    #####si da error con la funcion open, usa import Pil.Image, import Pil.ImageTk
+            
+            img = PIL.Image.open(*******)
 
 
 #img tkinter

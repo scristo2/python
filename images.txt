@@ -6,3 +6,25 @@ if __name__ == "__main__":
 
     img = Image.open("geofisica.jpg")
     img.show()
+
+
+#img tkinter
+import tkinter as tk
+from tkinter import messagebox
+from PIL import Image, ImageTk
+import os
+from os import path
+import sys
+def main():
+
+    window = tk.Tk()
+    window.title('behindGate')
+    window.geometry('500x500')
+    window.minsize(500,500)
+    pathImage = os.path.abspath(os.path.join(os.path.dirname(__file__), 'images', 'orfibesa.png'))
+    load = Image.open(pathImage)
+    resize = load.resize((250, 250), Image.ANTIALIAS#es un filtro)
+    new_pic = ImageTk.PhotoImage(resize)
+    label = tk.Label(window, image=new_pic)
+    label.pack()
+    window.mainloop()  

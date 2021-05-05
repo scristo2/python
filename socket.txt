@@ -6,6 +6,8 @@ cliente.py
 ----servidor.py
 import socket
 
+####Solo se permite un uso de cada dirección de socket -> si te sale este error,esque hay otro programa que esta usando ese puerto
+
 mysocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 mysocket.bind((socket.gethostname(),8000))
 mysocket.listen(5)

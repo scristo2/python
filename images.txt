@@ -1,7 +1,7 @@
 #en mac
 
 os.system('open test.png')
-
+lo de abajo para window tambien vale
 -------
 #upload images tkinter abajo del todo
 

@@ -1,7 +1,15 @@
 import urllib.request
 import json
+import request
 if __name__ == "__main__":
 
   ip = json.loads(urllib.request.urlopen('https://jsonip.com').read())['ip']
   print(ip)
+  
+  
+  oooo esta
+  
+  header = {}
+  ip = requests.get('https://jsonip.com', timeout=5, headers=header).text
+  print(json.loads(ip)['ip'])
   

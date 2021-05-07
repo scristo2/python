@@ -6,7 +6,7 @@ s = socket.socket()         # Create a socket object
 host = socket.gethostname() # Get local machine name
 port = 61707                 # Reserve a port for your service.
 s.bind((host, port))        # Bind to the port
-f = open('torecv.png','wb')
+f = open('torecv.png','wb')  #WRITE BINARY, PORQUE COGE EL TEXTO BINARIO ENVIADO POR EL CLIENTE
 s.listen(5)                 # Now wait for client connection.
 while True:
     c, addr = s.accept()     # Establish connection with client.
@@ -23,4 +23,25 @@ while True:
 
 
 #cliente
+import socket
+import time
+import os
+from PIL import Image
+from PIL import UnidentifiedImageError
+if __name__ == '__main__':
 
+
+        mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        mysocket.connect(('83.51.122.160', 61707))
+        f = open('orfibesa.png','rb')  #READ BINARY TEXT IMAGE 
+        print ('Sending...')
+        l = f.read(1024)
+        while (l):
+          print ('Sending...')
+          mysocket.send(l)
+          l = f.read(1024)
+        f.close()
+        print ("Done Sending")
+        mysocket.shutdown(socket.SHUT_WR)
+        print (mysocket.recv(1024).decode())
+        mysocket.close()

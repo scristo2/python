@@ -1,0 +1,13 @@
+aa = [111]
+
+   aa.append('sss')
+
+   print(aa)
+
+   aa.pop(0)
+
+   print(aa)
+   
+   
+   remove('hola')->en este caso elmina hola del array, si no esta lanza error
+   .pop(1)->elima el array por index, es decir pos posicon en el array

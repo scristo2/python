@@ -1,0 +1,3 @@
+import tkinter.font as font
+
+self.titleLabel.config(cursor= 'heart', fg='red' ,font= font.Font(size=20), bg='#000000'

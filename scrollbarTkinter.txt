@@ -1,16 +1,21 @@
 https://riptutorial.com/tkinter/example/27784/scrolling-a-canvas-widget-horizontally-and-vertically
- canvas = tk.Canvas(self)
-        scroll = Scrollbar(self, command=canvas.yview)
-        frame = tk.Frame(canvas)
-        for i in range(100):
+ def sizeTest(self, event):
 
-            button = tk.Button(frame, text='holl amundo cjcdjd')
-            button.configure(width=200, anchor='w')
-            button.pack()
-        canvas.create_window(0,0, anchor=tk.NW, window=frame)
-        canvas.update_idletasks()
+       self.canvas.itemconfig(self.test, width=event.width) #itemconfig porque la ventana creada es un item de canvas como digo mas abajo
+       
 
-        canvas.configure(scrollregion=canvas.bbox('all'), yscrollcommand=scroll.set)
-        frame.configure(bg='red')
-        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand='yes')
-        scroll.pack(side=tk.RIGHT, fill=tk.Y)
+
+    def create_widgets(self):
+
+        self.canvas = Canvas(self)
+        self.scrollcanvas = Scrollbar(self, orient='vertical',command=self.canvas.yview)
+        self.frameCanvas = Frame(self.canvas)
+        for i in range(10):
+            self.button = Button(self.frameCanvas, text='sss')
+            self.button.pack()
+        self.test = self.canvas.create_window(0,0, anchor='nw', window=self.frameCanvas) #get in var created window canvas
+        self.canvas.update_idletasks()
+        self.canvas.bind('<Configure>', self.sizeTest) #atribuimos el cambio al camvas ya que la ventana es un item del canvas
+        self.canvas.configure(scrollregion=self.canvas.bbox('all'), yscrollcommand=self.scrollcanvas.set, bg='yellow')
+        self.canvas.pack(side=LEFT, expand='yes', fill=BOTH)
+        self.scrollcanvas.pack(side=RIGHT, fill=Y)

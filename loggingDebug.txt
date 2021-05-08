@@ -14,3 +14,16 @@ logging.basicConfig(filename='errores.log', format="%(asctime)s %(name)s %(messa
 
 log.debug(....)
 log.cristical(....)
+
+
+#para imprimir por consiloa el log,en basic config quita el filename
+
+import logging
+if __name__ == "__main__":
+
+    log = logging.getLogger(__file__)
+
+    logging.basicConfig(level= logging.INFO, filename='test.log', format="%(asctime)s %(name)s %(message)s")
+
+    log.critical('esto es un aviso de empezar la apliacion')
+    log.info('esto es un mensaje de aviso para el usuario')

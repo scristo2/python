@@ -1,0 +1,28 @@
+class hilo1(threading.Thread):
+
+      def __init__(self, nameHilo):
+         threading.Thread.__init__(self, name=nameHilo, target=hilo1.run)
+         self.nameHilo = nameHilo
+
+
+      def run(self):
+
+         self.guardar()
+
+
+
+      def guardar(self):
+
+         time.sleep(2)
+         print('esto es un hilo de la clase1 %s' %self.getName())
+
+
+
+
+   primera = hilo1('hilo1')
+   #primera.setDaemon(True)
+   primera.start()
+   primera.join()#se une al hilo principal de python,esto quiere decir,que trancure todo iagual,es este caso espera 2 segundos de la funciom guardar
+   #imprime el mensaje de abajo de hola me llamo sergio, pero si le quito el join,como tiene quie esparar los dos segundos,
+   #en este caso imprime primero el mensaje de hola me llamo sergio, y lugo cuando pasan los 2 seegundo,ejecuta el mensaje de la func guardar
+   print('hol ame llamios sergio')       

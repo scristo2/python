@@ -7,3 +7,23 @@ initial = time.time()
 <<<<<<main()
 
 print('ha tardado, time.time() - initial, 'segundos')
+
+
+oooo
+
+from datetime import datetime
+import time
+import threading
+if __name__ == "__main__":
+
+    def test():
+
+        for i in range(4):
+            print(i)
+            time.sleep(2)
+
+
+    initoial = datetime.now()
+    test()
+    fin = datetime.now()
+    print(fin - initoial)

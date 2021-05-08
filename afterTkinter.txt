@@ -1,0 +1,39 @@
+if __name__ == "__main__":
+
+    class frame(tk.Frame):
+
+        def __init__(self, master=None):
+            super().__init__(master)
+            self.master = master
+            self.pack()
+            self.create_widgets()
+
+
+
+        def second(self):
+            
+            self.label.configure(text=random.randint(1, 100))    
+
+
+        def create_widgets(self):
+
+            self.label = tk.Label(self)
+            self.label.pack()
+            self.after(2, self.second)  
+
+    def velocidad(x):
+        array = ['orange', 'red', 'blue', 'yellow']
+        x.configure(bg=array[random.randint(0, 3)])                
+        x.after(2000, velocidad, x) ######en milisegundos
+
+    window = tk.Tk()
+    window.title('nueva ventana')
+    x = 600
+    y = 600
+    a = (window.winfo_screenwidth() / 2) - (x / 2)
+    b = (window.winfo_screenheight() / 2) - (y / 2)
+    window.geometry('%sx%s+%s+%s' %(x, y, int(a), int(b)))
+    button = tk.Button(window)
+    button.pack()
+    velocidad(window)
+    window.mainloop()

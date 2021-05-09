@@ -1,0 +1,15 @@
+class frame(tk.Frame):
+
+    def __init__(self, master=None):
+
+        super().__init__(master)
+        self.master = master
+        self.pack(fill=tk.BOTH, expand='yes')
+        self.configure(bg='red')
+        self.create_widgets() 
+    
+
+
+    def create_widgets(self):
+      self.update_idletasks() ###importante refrescar la ventna,para que la dibuje antes obtener el tamaño
+      print(self.winfo_width())

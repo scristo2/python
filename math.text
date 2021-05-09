@@ -1,0 +1,6 @@
+import math
+
+if __name__ == "__main__":
+
+   print(math.pi) >>>3.1416.......
+   print(math.fsum([10,20])) >>hace la suma de todos los numeros que pongas en el array

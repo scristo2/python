@@ -1,0 +1,2 @@
+self.labelFrame.configure(bg='black', border=0, fg='white', font=('Helvetica', 15), highlightbackground='red', highlightthickness=2)
+#los dos ultimios, el primero es el color del borde y el sgunso el el grosor,si no van los dos, no se ve el color

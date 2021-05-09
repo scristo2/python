@@ -11,3 +11,12 @@ window.minsize(500,500)
 window.geometry('%dx%d+%d+%d' %(w, x, y, z))
 scroll = tk.Scrolbar(window    
 scroll.pack(side=tk.LEFT, fill=tk.Y) #fill recierda qu ebotk, en Y, en X etc
+
+
+elf.frame.pack()
+self.frame.pack_propagate(0)
+
+#si se ponen en estas dos lineas en los frames x ejemplo, o uqe hara que si tendra en cuenta el width y height  que le pongas,por defecto si no le pones 
+la linea de propagate las medidas las obvia para ajustarse al tamaño
+
+##esto usando pack, si usas grid pues tiene lo mismo perio empieza con grid

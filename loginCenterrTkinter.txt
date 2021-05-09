@@ -1,0 +1,26 @@
+ self.labelFrame = LabelFrame(self, text='Login')
+
+ self.labelUsername = Label(self.labelFrame, text='Nombre de usuario')
+ self.labelUsername.configure(bg='#000000', fg='white', font=('Helvetica', 15))
+ self.labelUsername.grid(row=0, column=0, padx=30)
+        
+ self.entryUsername = Entry(self.labelFrame, justify='center')
+ self.entryUsername.configure(font=('Helvetica', 10))
+ self.entryUsername.grid(row=0, column=1, padx=30, pady=30, ipadx=40)
+
+ self.labelPassword = Label(self.labelFrame, text='contraseña')
+ self.labelPassword.configure(bg='#000000', fg='white', font=('Helvetica', 15))
+ self.labelPassword.grid(row=1, column=0, padx=30)
+
+ self.entryPassword = Entry(self.labelFrame, show='*', justify='center') ##justify dentrr del inut para que escriba en elmedio
+ self.entryPassword.configure(font=('Helvetica', 10))
+ self.entryPassword.grid(row=1, column=1, ipadx=40)
+
+
+ self.buttonLogin = Button(self.labelFrame, text='acceder')
+ self.buttonLogin.grid(row=2, column=0, columnspan=2, pady=30) ##ocupa 2 espacios
+
+ self.labelFrame.configure(bg='black', border=0, fg='white', font=('Helvetica', 15), highlightbackground='red', highlightthickness=2)  #los dos ultimos e spa el color de los bordes
+ ,el primero es el color, y el segundoe s el gros,si no van los dos no se ven
+ self.labelFrame.place(relx=0.5, rely=0.5, anchor='center')  ##relx y rely es la proporcion en x y y del tamaño de l apantalla, por eso es 0.5,que es la 
+ mitad

@@ -1,0 +1,72 @@
+class frame(tk.Frame):
+
+
+    def __init__(self, master=None):
+
+        super().__init__(master)
+        self.master = master
+        self.pack(fill=tk.BOTH, expand='yes')
+        #self.configure(bg='#ffffff')
+        self.create_widgets()
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(0, weight=1)
+
+
+
+    def motion(self, event):
+        
+        
+        self.imgLogo.place_configure(x=(event.x - (self.imgLogo.winfo_width() * 2)))   
+        
+
+
+    def firstTime(self):
+
+        messagebox.showinfo(title='eres nuevo', message='en breve se te abrira una nueva pestaña')
+
+
+    def create_widgets(self):
+        
+        self.imageLogo = PIL.Image.open(os.path.abspath(os.path.join(os.path.dirname(__file__), 'images', 'world.png')))
+        self.adaptResizeImageLogo = self.imageLogo.resize((150,150), PIL.Image.ANTIALIAS)
+        self.new_ImageLogo = PIL.ImageTk.PhotoImage(self.adaptResizeImageLogo)
+        self.imgLogo = Label(self, image=self.new_ImageLogo)
+        self.imgLogo.place(relx = 0.5, rely=0.15, anchor='center')
+
+        #create login
+        
+        self.labelFrame = LabelFrame(self, text='Login')
+
+        self.labelUsername = Label(self.labelFrame, text='Nombre de usuario')
+        self.labelUsername.configure(bg='#000000', fg='white', font=('Helvetica', 15))
+        self.labelUsername.grid(row=0, column=0, padx=30)
+        
+        self.entryUsername = Entry(self.labelFrame, justify='center')
+        self.entryUsername.configure(font=('Helvetica', 15))
+        self.entryUsername.grid(row=0, column=1, padx=30, pady=30, ipadx=40)
+
+        self.labelPassword = Label(self.labelFrame, text='contraseña')
+        self.labelPassword.configure(bg='#000000', fg='white', font=('Helvetica', 15))
+        self.labelPassword.grid(row=1, column=0, padx=30)
+
+        self.entryPassword = Entry(self.labelFrame, show='*', justify='center')
+        self.entryPassword.configure(font=('Helvetica', 15))
+        self.entryPassword.grid(row=1, column=1, ipadx=40)
+        
+        self.firstTime = Button(self.labelFrame, text='¿primera vez?', command=self.firstTime)
+        self.firstTime.configure(font=font.Font(underline=TRUE, weight='bold', size=8), fg='white', bg='#000000', cursor='mouse', border=0)
+        self.firstTime.grid(row=2, column=0, columnspan= 2, pady=40)
+
+        self.recoverPassword = Button(self.labelFrame, text='recuperar contraseña')
+        self.recoverPassword.configure(font=font.Font(size=8, underline=True, weight='bold'), fg='white', bg='#000000', cursor='mouse', border=0)
+        self.recoverPassword.grid(row = 3, column=0, columnspan = 2, pady=5)
+
+
+        self.buttonAccess = Button(self.labelFrame, text='acceder')
+        self.buttonAccess.grid(row=4, column=0, columnspan=2, pady=40)
+
+        self.labelFrame.configure(bg='#000000', border=0, fg='white', font=('Helvetica', 10), highlightbackground='red', highlightthickness=2)  
+        self.labelFrame.place(relx=0.5, rely=0.5, anchor='center')
+        self.labelFrame.bind('<Motion>', self.motion)
+
+

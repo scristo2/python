@@ -25,3 +25,55 @@
     except requests.HTTPError as err:
 
         print('invalida respuesta del protocolo http') 
+
+
+
+#######################
+
+try:
+
+      proxy = {
+
+          "http" : "http://158.177.252.170:3128",
+          'https' : "https://158.177.252.170:3128"
+      } 
+
+      headers = {
+
+          'User-Agent' : 'dogeocin',
+          'Client-Ip' : '11.11.111.111',
+          'X-FORWARDED-FOR' : '22.22.222.222',
+          'X-FORWARDED' : '33.33.333.333',
+          'FORWARDED-FOR': '44.44.444.444',
+          'FORWARDED': '55.55.555.555',
+          'REMOTE-ADDR' : '77.77.777.777'
+
+      }
+      
+      url = 'https://orfibesa.com'
+
+      timeout = 5
+
+      response = requests.get(url, timeout=timeout, headers=headers, proxies=proxy).text
+
+      print(response)
+
+
+   except requests.ConnectionError as error:
+
+      log.critical('ha ocurrio un error al conectarse a la url %s' %url)
+
+
+   except requests.TooManyRedirects as err:
+
+      log.critical('ha ocurrido un error ya que ha habido demasidas redirecciones')
+
+
+   except requests.Timeout as error:
+
+      log.critical('no se ha podido conectar con el servidor ya que el tiempo ha expirado')
+
+
+   except requests.HTTPError as err:
+
+      log.critical('ha ocurrio un error con el protocolo del sitio web %s' %url)           

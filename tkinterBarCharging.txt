@@ -1,0 +1,17 @@
+from tkinter import ttk
+
+if __name__ '__main__':
+
+     def charging():
+        
+         for i in range(10):
+         
+              window.update_idletask()
+              barcharging['value'] += 10
+              time.sleep(1)
+
+     barcharging = ttk.ProggressBar(window, orient='horizontal', lenght=100, mode='determinate/inderterminate')#mode a elegir, indertimate esque va de un lado a otro
+     barching.pack(fill=tk.BOTH)
+     
+     button = ttk.Button(window, text='buscar', command=charging)
+     button.pack()

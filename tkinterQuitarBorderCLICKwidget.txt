@@ -1,0 +1,1 @@
+self.canvasPrincipal = tk.Canvas(self, highlightthickness=0 )

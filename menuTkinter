@@ -18,3 +18,11 @@ def createmenu(self):
 
         menubar.add_cascade(label='inicio', menu=first)
         menubar.add_cascade(label='second', menu=second)
+        
+        
+        
+        
+        
+#get text label menu
+
+ print(self.menubar.entrycget(2, 'label'))

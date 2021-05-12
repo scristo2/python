@@ -1,0 +1,5 @@
+import webbrowser
+
+self.botonWindowSearcherClose = tk.Button(self.frameWindowSearch, text='x', command= lambda  : webbrowser.open_new_tab(url='https://as.com'))
+
+#con new tab lo que hace si el navegador esta abierto abre una nueva ventana, 

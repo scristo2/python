@@ -1,5 +1,27 @@
 import webbrowser
 
-self.botonWindowSearcherClose = tk.Button(self.frameWindowSearch, text='x', command= lambda  : webbrowser.open_new_tab(url='https://as.com'))
+def openWeb(self, x):
+
+            try:
+
+               mybrowser = webbrowser.get('chrome') 
+               
+               mybrowser.open_new_tab(x)
+
+
+            except webbrowser.Error as err:
+
+                try:
+
+                    webbrowser.open_new_tab(x)
+
+
+                except webbrowser.Error as error:
+
+                     messagebox.showerror(title='error', message='no se ha podido abrir el navegador web')
+                     log.critical(err)
+                     log.critical(error) 
+
+self.botonWindowSearcherClose = tk.Button(self.frameWindowSearch, text='x', command= lambda  : self.openWeb(url='https://as.com'))
 
 #con new tab lo que hace si el navegador esta abierto abre una nueva ventana, 

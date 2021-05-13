@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+
+if __name__ == '__main__':
+
+    arreglo = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
+    arreglo2 = [0, 67, 300, 34, 302, 303, 118, 1000, 456, 234, 11,0]
+
+    plt.plot(arreglo, arreglo2)
+    plt.show()

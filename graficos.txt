@@ -7,3 +7,16 @@ if __name__ == '__main__':
 
     plt.plot(arreglo, arreglo2)
     plt.show()
+    
+    
+    
+#grafico barra
+import matplotlib.pyplot as plt
+
+if __name__ == '__main__':
+
+    x = ['mujer', 'hombre', 'hombre', 'niño', 'niña', 'hombre']
+    num_bins = 12
+    n, bins, patches = plt.hist(x, num_bins, facecolor = 'green')
+    plt.show()
+    

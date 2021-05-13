@@ -19,3 +19,21 @@ https://riptutorial.com/tkinter/example/27784/scrolling-a-canvas-widget-horizont
         self.canvas.configure(scrollregion=self.canvas.bbox('all'), yscrollcommand=self.scrollcanvas.set, bg='yellow')
         self.canvas.pack(side=LEFT, expand='yes', fill=BOTH)
         self.scrollcanvas.pack(side=RIGHT, fill=Y)
+
+#####muy importante
+
+hacer scroll en x y que el scroll se vaya solo al final  automaticamente a la vez que se van añadiento widgets
+
+1º-primero actualizar el frame donde contiene los widgets(no es el principal en este caso,aqui <Configure> porque 
+self.frameContainerOpenedWindowCanvas.bind('<Configure>', lambda x : self.canvasBarOpenedWindows.configure(scrollregion=self.canvasBarOpenedWindows.bbox('all')))
+
+2º-la funcion del boton de mas widgets
+ def commandOpenNewWindow(self):
+
+            for i in range(1):
+ 
+             self.test = tk.Button(self.frameContainerOpenedWindowCanvas, text='hellow world')
+             self.test.pack(side=tk.LEFT)
+             self.canvasBarOpenedWindows.update_idletasks()
+             self.canvasBarOpenedWindows.xview_moveto(1) #move the scroll to the end
+ 

@@ -1,0 +1,1 @@
+self.canvasWindow.configure(bg='blue', relief='raised', borderwidth=3) #relief hay mas opciones SUNKEN, RAISED, GROOVE, RIDGE, FLAT. y esto depende del border width tambien

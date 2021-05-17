@@ -1,0 +1,7 @@
+from PIL import Image
+import os
+import pytesseract
+
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+    print(pytesseract.image_to_string(Image.open(os.path.abspath(os.path.join(os.path.dirname('script.py'), 'source', 'images', 'pantallazo_fifa.jpg')))))

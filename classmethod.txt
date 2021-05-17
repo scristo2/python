@@ -1,0 +1,21 @@
+ class person:
+
+      raza = 'humana'
+
+      def __init__(self, nombre):
+          
+         self.nombre = nombre
+      
+
+      def presentarse(self, **argv):
+
+         return self.nombre
+
+      @classmethod
+      def saludar(cls):
+
+         print('%s %s' %(cls.raza, cls('sergio').presentarse()))
+
+
+   person.saludar()     
+   <<< humana sergio

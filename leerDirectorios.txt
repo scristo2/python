@@ -1,0 +1,2 @@
+#en array
+print(os.listdir(os.path.abspath(os.path.join(os.path.dirname('script.py'), 'source', 'images', 'firstStreet'))))

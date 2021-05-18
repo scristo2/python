@@ -1,0 +1,16 @@
+import pyttsx3
+if __name__ == '__main__':
+
+  
+  class bot:
+
+    def __init__(self, message):
+
+      self.engine = pyttsx3.init()
+      self.engine.say(message)
+      self.engine.runAndWait()
+
+
+
+
+  sori = bot('nesss')  

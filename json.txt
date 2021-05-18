@@ -15,4 +15,17 @@ try:
       
       
       
-#      
+#
+
+try:
+
+      file = open(os.path.abspath(os.path.join(os.path.dirname(__file__), 'hola.json')), "r")
+      texto = json.load(file)
+      file.close()
+
+      print(texto['provincia']['tercera']['ciudad'])
+
+
+   except JSONDecodeError as error:
+
+      print('error al recoger el valor del json') 

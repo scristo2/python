@@ -16,7 +16,7 @@ log.debug(....)
 log.cristical(....)
 
 
-#para imprimir por consiloa el log,en basic config quita el filename
+#para imprimir por consiloa el log,en basic config quita el filename y usar el logging.
 
 import logging
 if __name__ == "__main__":

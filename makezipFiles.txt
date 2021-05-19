@@ -3,6 +3,20 @@ from zipfile import ZipFile
     #hacer zip con el nombre samp.zip y tendra tendro el archivo jajaj.log
     with ZipFile('spam.zip', 'w') as myzip: #recordar w por write
       myzip.write('jajaj.log')
+    
+    
+    #hacer zip con varios arxhivos
+    
+    from zipfile import ZipFile
+
+    lista = ['video.mp4', 'jajaj.log']
+
+    with ZipFile('spam.zip', 'w') as myzip:
+
+      for i in lista:
+
+          myzip.write(i)
+
 
     
      #leer zip file , recordar la r de read

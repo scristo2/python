@@ -1,9 +1,39 @@
-self.imageBackground = image.open(os.path.abspath(os.path.join(os.path.dirname('script.py'), 'source', 'images', 'fondo.jpg')))
-self.resize = self.imageBackground.resize((self.x, self.y), image.ANTIALIAS)
-self.new_pic = imagetk.PhotoImage(self.resize) 
-self.canvas_principal = tk.Canvas(self)
-self.canvas_principal.configure(bg='red')
-self.canvas_principal.create_image(0, 0, anchor='nw', image=self.new_pic) ##esta es lo que hace el background
-self.button = tk.Button(self.canvas_principal, text='click me')
-self.button.pack()
-self.canvas_principal.pack(fill=tk.BOTH, expand=TRUE)
+##usamos bind con image backgroun para cuando aumente la pantalla, la imagen de fondo tambien
+class window1(tk.Tk):
+
+    def __init__(self,):
+
+        super().__init__()
+        self.title('dialogator 3000')
+        self.minsize(600,600)
+        self.iconbitmap(os.path.abspath(os.path.join(os.path.dirname('script.py'), 'source' ,'images', 'tele.ico')))
+        self.x = 800
+        self.y = 800
+        self.xw = int((self.winfo_screenwidth() / 2) - (self.x / 2))
+        self.yw = int((self.winfo_screenheight() / 2) - (self.y / 2))
+        self.geometry("%dx%d+%d+%d" %(self.x, self.y, self.xw, self.yw))
+        self.create_widgets()
+        self.mainloop()
+
+    
+
+    def imageBackground(self, event):
+
+        self.update_idletasks()
+        self.image_background = image.open(os.path.abspath(os.path.join(os.path.dirname('script.py'), 'source', 'images', 'fondo.jpg')))
+        self.image_resize = self.image_background.resize((event.width, event.height), image.ANTIALIAS)
+        self.new_pic = imagetk.PhotoImage(self.image_resize)
+        self.background_create_image = self.canvas_principal.create_image(0, 0, anchor='nw', image=self.new_pic)
+
+
+    def create_widgets(self):
+
+        self.canvas_principal = tk.Canvas(self)
+        self.canvas_principal.configure(bg='red')
+        self.canvas_principal.pack(fill=tk.BOTH, expand=TRUE)
+        self.bind('<Configure>', self.imageBackground)   
+
+
+
+
+        

@@ -1,0 +1,9 @@
+self.imageBackground = image.open(os.path.abspath(os.path.join(os.path.dirname('script.py'), 'source', 'images', 'fondo.jpg')))
+self.resize = self.imageBackground.resize((self.x, self.y), image.ANTIALIAS)
+self.new_pic = imagetk.PhotoImage(self.resize) 
+self.canvas_principal = tk.Canvas(self)
+self.canvas_principal.configure(bg='red')
+self.canvas_principal.create_image(0, 0, anchor='nw', image=self.new_pic) ##esta es lo que hace el background
+self.button = tk.Button(self.canvas_principal, text='click me')
+self.button.pack()
+self.canvas_principal.pack(fill=tk.BOTH, expand=TRUE)

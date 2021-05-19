@@ -1,0 +1,14 @@
+from zipfile import ZipFile
+    
+    #hacer zip con el nombre samp.zip y tendra tendro el archivo jajaj.log
+    with ZipFile('spam.zip', 'w') as myzip: #recordar w por write
+      myzip.write('jajaj.log')
+
+    
+     #leer zip file , recordar la r de read
+    with ZipFile('spam.zip', 'r') as myzip:
+
+        print(myzip.printdir()) #muestra todos los archivos dentro
+
+        myzip.extractall() #extrae todos los archivos del zip a archivos normales. 
+

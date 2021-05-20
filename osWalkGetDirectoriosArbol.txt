@@ -19,7 +19,7 @@ import os
         #dirs te muestra solo todos los directorios de la ruta
         #files te muestra solo loas archivos de la ruta
 
-           for name in c:
+           for name in files:
               code = os.path.join(root, name)
 
               if 'hola' in str(code):

@@ -1,0 +1,17 @@
+def testeo():
+
+        if test.winfo_viewable():
+
+            print('es vissible')
+
+        else:
+
+            print('no es visible')
+
+
+        test.after(1000, testeo)        
+
+    test = tk.Tk()
+    test.minsize(400,400)
+    test.after(1000, testeo)
+    test.mainloop()

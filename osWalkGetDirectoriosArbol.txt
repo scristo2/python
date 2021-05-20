@@ -3,6 +3,10 @@ import os
 ##leer archio del escriorio sin tenerlo
 
     for root, dirs, files in os.walk('/Users/sergiocristobalcolino/Desktop/', topdown=False):
+    
+        # root es la ruza raiz
+        #dirs te muestra solo todos los directorios de la ruta
+        #files te muestra solo loas archivos de la ruta
 
            for name in c:
               code = os.path.join(root, name)

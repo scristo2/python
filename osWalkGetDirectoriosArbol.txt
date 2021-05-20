@@ -1,0 +1,19 @@
+import os
+
+##leer archio del escriorio sin tenerlo
+
+    for root, dirs, files in os.walk('/Users/sergiocristobalcolino/Desktop/', topdown=False):
+
+           for name in c:
+              code = os.path.join(root, name)
+
+              if 'hola' in str(code):
+
+                  with open('/Users/sergiocristobalcolino/Desktop/hola.txt', 'r') as co:
+
+                      l = co.read(1024)
+
+                      while (l):
+
+                          print(l)
+                          l = co.read(1024)

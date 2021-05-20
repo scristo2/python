@@ -13,10 +13,10 @@ curso = conn.cursor()
 
  tupla = (name, 'NULL', resultScrapping[0], resultScrapping[1], resultScrapping[2], resultScrapping[3], resultScrapping[4], resultScrapping[5],)
 
- sql2 = "INSERT INTO %s (id, primero, segundo, tercero, cuarto, quinto, sexto) VALUES (%s, %s, %s, %s, %s, %s, %s)" %tupla
+ sql2 = "INSERT INTO %s (id, primero, segundo, tercero, cuarto, quinto, sexto) VALUES (%s, %s, %s, %s, %s, %s, %s)"
 
                     
- curso.execute(sql2)
+ curso.execute(sql2, tupla)
 
  response = 'insertado diario'
 

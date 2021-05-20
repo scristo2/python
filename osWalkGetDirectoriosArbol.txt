@@ -3,6 +3,17 @@ import os
 ##leer archio del escriorio sin tenerlo
 
     for root, dirs, files in os.walk('/Users/sergiocristobalcolino/Desktop/', topdown=False):
+                  
+                  ##topdown es opcional, si es false primero lee las carpetas de dentro de la ruta principal y luego ya los archivos del principal
+                  y si es true pues lee primero los archivos principales que no estan en carpetas o directorios y luego ya las capetas
+                  
+                  for root, dirs , files in os.walk(os.path.abspath(os.path.dirname('video.mp4')),topdown=True):
+
+                             print(files)
+                  
+                  ej-> projecto -> script.py, source(dir), test(dir)
+                   with true >>>>script.py, (archivos ddntro de source), (archivos dentro de test)
+                   with false >>>>(archivos ddntro de source), (archivos dentro de test), script.py
     
         # root es la ruza raiz
         #dirs te muestra solo todos los directorios de la ruta

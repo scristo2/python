@@ -1,6 +1,24 @@
 import sqlite3
 #ya viene instalado en el pip
 
+CREATE TABLE artists_backup(
+   ArtistId INTEGER PRIMARY KEY AUTOINCREMENT, ##el id autoincreemnt
+   Name NVARCHAR
+);
+
+
+sql = "CREATE TABLE IF NOT EXISTS reference (id integer PRIMARY KEY , referenco text NOT NULL)"
+
+
+       sql1 = "SELECT referenco FROM reference WHERE id=1"
+
+       aa = cursor.execute(sql1)
+
+       for i in aa.fetchall():
+
+           print(i)
+
+
 def __Datasqlite(self, *args):
 
         response = None

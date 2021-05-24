@@ -2,5 +2,5 @@ import request
 
 url = "https://serveratlantic.com"
 vara = {'nombre' : 'sergio'}
-response = requests.get(url, data=vara, timeout=5)
+response = requests.post(url, data=vara, timeout=5).text
 print(response)

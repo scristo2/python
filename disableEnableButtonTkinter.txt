@@ -1,0 +1,8 @@
+window = tk.Tk()
+window.minsize(600,600)
+boton = tk.Button(window, text='sss', state='disabled')
+#activar
+boton2 = tk.Button(window, text='aaa', command= lambda : boton.configure(state='normal'))
+boton.pack()
+boton2.pack()
+window.mainloop()

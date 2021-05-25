@@ -19,6 +19,7 @@ sql = "CREATE TABLE IF NOT EXISTS reference (id integer PRIMARY KEY , referenco 
            print(i)
             print('hola a tosos %s' %exe3.fetchall()[0])
             print(''.join(exe3.fetchall()))
+            print(''.join(exe3.fetchall()[0]))
 
 
 def __Datasqlite(self, *args):

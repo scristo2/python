@@ -1,5 +1,9 @@
 from tkinter import ttk
 
+style1 = ttk.Style()
+style1.configure('progress.Horizontal.TProgressbar') ######very important name.Horizontal.TProgress
+self.barCharging = ttk.Progressbar(self,maximum=100, mode='determinate', style='progress.Horizontal.TProgressbar')
+
 if __name__ '__main__':
 
      def charging():

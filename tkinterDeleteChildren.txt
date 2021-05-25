@@ -1,0 +1,10 @@
+def borrar(self):
+
+        for i in self.winfo_children():
+            
+
+            if 'menu' in str(i):
+
+                continue
+
+            i.destroy()  

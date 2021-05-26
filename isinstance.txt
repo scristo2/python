@@ -1,0 +1,16 @@
+aa = persona(name='ssss')
+
+
+if isinstance(aa, object): ##si esta isntacioado como clase
+
+ print('eureka')
+    
+if isinstance(aa,(persona, object): #si esta instanciado como clase persona o clase
+
+     print('eureka')
+
+ x = 'ww'
+
+if isinstance(x, (int, str, float)): #si est ainstaciado como int, string o float 
+
+   print('eureka')  

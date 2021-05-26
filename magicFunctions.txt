@@ -70,3 +70,53 @@ class persona:
  x = 7
 
 print(x.__add__(7))<<<<<<14
+
+---------------------
+
+__dict__
+
+ class persona:
+
+        def __init__(self, name) -> None:
+            
+            self.name = name
+
+
+        def __repr__(self) -> str:
+
+            rep = "persona(name='%s')"%self.name
+            return rep
+
+
+
+        def __sizeof__(self) -> int:
+
+                return object.__sizeof__(self)
+        
+
+
+
+        def hola(self):
+
+            return 'jajajaj'        
+    
+
+
+        def hablar(self):
+
+
+           print('me llamo s sshushsuhsishishsososhoshsosh %s'%self.name)
+
+
+
+
+
+ aa = persona(name='ssss')
+ xx = persona.__dict__
+ print(xx)
+ <<<<{'__module__': '__main__', '__init__': <function persona.__init__ at 0x0000026C2DB1C820>, '__repr__': <function persona.__repr__ at 0x0000026C2F38F040>, '__sizeof__': <function persona.__sizeof__ at 0x0000026C2F38F0D0>, 'hola': <function persona.hola at 0x0000026C2F38F160>, 'hablar': <function persona.hablar at 0x0000026C2F38F1F0>, '__dict__': <attribute '__dict__' of 'persona' objects>, '__weakref__': <attribute '__weakref__' of 'persona' objects>, '__doc__': None}
+PS C:\Users\USUARIO\Desktop\env-tkinter> 
+
+print(xx['hola]) >>>> <function persona.hola at 0x000001B2B838E1F0>
+
+

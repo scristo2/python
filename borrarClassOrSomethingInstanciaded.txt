@@ -1,0 +1,4 @@
+xx = persona('aaa')
+xx.hablar()
+del xx 
+xx.hablar() >>>> error ya que dice que no existe

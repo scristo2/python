@@ -1,0 +1,5 @@
+import os 
+
+
+
+os.remove(os.path.abspath(os.path.join(os.path.dirname('test.py'), 'borrar.py')))

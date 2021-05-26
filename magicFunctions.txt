@@ -1,3 +1,8 @@
+
+no tienen que ser todas en clases
+
+--------------
+
 __str__
 
 class persona:
@@ -32,4 +37,12 @@ class persona:
 
 
  aa = persona()
- aa()>>>acabamos de llamar a ...     
+ aa()>>>acabamos de llamar a ...
+ 
+ -----------------------
+ 
+ __add__
+ 
+ x = 7
+
+print(x.__add__(7))<<<<<<14

@@ -1,0 +1,17 @@
+__str__
+
+class persona:
+
+        def __init__(self, nombre):
+            self.nombre = nombre
+
+
+        def __str__(self) -> str:
+            return self.nombre
+
+
+
+    
+    
+    soci = persona(nombre='sergio')
+    print(soci) >>>>>sergio

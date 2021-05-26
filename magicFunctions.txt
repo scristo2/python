@@ -23,7 +23,7 @@ class persona:
             return object.__new__(self)    
 
 
-aa = persona(name='sergio')  <<<<< antes del init 
+aa = persona(name='sergio')  <<<<< antes del init  
 
 -------------
 __repr__

@@ -15,3 +15,21 @@ class persona:
     
     soci = persona(nombre='sergio')
     print(soci) >>>>>sergio
+
+
+------------------------------
+
+__call__
+
+class persona:
+
+
+        def __call__(self,):
+               
+               print('acabamos de llamar a %s' %__class__)
+
+
+
+
+ aa = persona()
+ aa()>>>acabamos de llamar a ...     

@@ -1,19 +1,25 @@
- class exceptiontJKINTER(Exception):
+if __name__ == "__main__":
 
-        def __init__(self,value):
-           super().__init__()
-           self.value = value
+    class prueba(Exception):
 
-        
+        def __init__(self,error):
+            super().__init__()
+            self.error = error
+
+
+
+        def __str__(self) -> str:
+            return self.error
+
 
 
 
 
     try:
 
-        raise exceptiontJKINTER('mi primer error')
+        raise prueba('esto es un error')
 
 
-    except exceptiontJKINTER as err:
+    except prueba as err:
 
-        print(err.value)  >>>>> 'mi primer error'   
+        print(err)    

@@ -16,4 +16,4 @@
 
     except exceptiontJKINTER as err:
 
-        print(err.value)     
+        print(err.value)  >>>>> 'mi primer error'   

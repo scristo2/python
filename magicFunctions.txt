@@ -120,3 +120,14 @@ PS C:\Users\USUARIO\Desktop\env-tkinter>
 print(xx['hola]) >>>> <function persona.hola at 0x000001B2B838E1F0>
 
 
+----------------
+
+__sizeof__
+
+class perosona:
+
+def __sizeof__(self) -> int:
+
+       return object.__sizeof__(self)
+
+

@@ -1,2 +1,12 @@
 globals()['age'] = 25
 print('The age is:', age)
+
+def saludar():
+
+        global x
+
+        x = 344
+
+
+saludar()
+print(x)

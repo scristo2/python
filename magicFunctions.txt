@@ -2,9 +2,33 @@
 no tienen que ser todas en clases
 
 --------------
+__repr__
+#sirve de inforamcion a la maquina
+class persona:
+
+        def __init__(self, name) -> None:
+            
+            self.name = name
+
+
+        def __repr__(self) -> str:
+
+            rep = "persona(name='%s')"%self.name
+            return rep
+
+
+        def hablar(self):
+
+
+           print('me llamo %s'%self.name)
+
+
+person = persona(name='sergio')
+print(person.__repr__())>>>>> person(name='aaa')          
+----------------
 
 __str__
-
+#sirve de informacion al usuario
 class persona:
 
         def __init__(self, nombre):

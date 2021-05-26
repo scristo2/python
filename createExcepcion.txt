@@ -1,0 +1,19 @@
+ class exceptiontJKINTER(Exception):
+
+        def __init__(self,value):
+           super().__init__()
+           self.value = value
+
+        
+
+
+
+
+    try:
+
+        raise exceptiontJKINTER('mi primer error')
+
+
+    except exceptiontJKINTER as err:
+
+        print(err.value)     

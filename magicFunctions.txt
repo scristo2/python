@@ -2,6 +2,30 @@
 no tienen que ser todas en clases
 
 --------------
+
+__new__
+
+class persona:
+        
+
+        ll  = 'fafaffa'
+
+        def __init__(self, name):
+            
+            self.name = name
+
+
+
+        def __new__(self, name):
+
+            print('antes del init')
+
+            return object.__new__(self)    
+
+
+aa = persona(name='sergio')  <<<<< antes del init 
+
+-------------
 __repr__
 #sirve de inforamcion a la maquina
 class persona:

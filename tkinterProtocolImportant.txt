@@ -1,0 +1,3 @@
+self.protocol('WM_DELETE_WINDOW', self.closeProgramQuestion) ##cada vez que se cierre el rpograma desde la x
+               WM_TAKE_FOCUS: It occurs when the application gets focus.
+               WM_SAVE_YOURSELF: It occurs when the application needs to store content.

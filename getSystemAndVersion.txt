@@ -1,0 +1,15 @@
+import platform
+
+print(paltform.platform())
+print(platform.system())
+print(platform.release())
+print(platform.version())
+print(platform.machine())
+
+output:
+
+Windows-10-10.0.19041-SP0
+Windows
+10
+10.0.19041
+AMD64

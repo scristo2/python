@@ -1,0 +1,1 @@
+self.attributes('-alpha', 0.20) ##rango 0.0 a 1.0

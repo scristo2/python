@@ -1,0 +1,17 @@
+class window(tk.Tk):
+
+        def __init__(self,):
+
+            super().__init__()
+            self.title('Dialogator 3000')
+            self.x = 1000
+            self.y = 1000
+            self.wx = int((self.winfo_screenwidth() / 2) - (self.x / 2))
+            self.wy = int((self.winfo_screenheight() / 2) - (self.y / 2))
+            self.minsize(1000,1000)
+            self.geometry('%ix%i+%i+%i' %(self.x, self.y, self.wx, self.wy))
+            self.create_widgets()
+            self.iconbitmap(self.resource_path('source/images/logo.ico'))
+            self.protocol('WM_DELETE_WINDOW', self.closeProgram)
+            self.resizable(False, False) ########################## esto, el primero width, el segundo height
+            self.mainloop()

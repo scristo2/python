@@ -5,6 +5,11 @@ pyinstaller namefile.py --onefile --windowed(solo si es por ejemplo como tkinter
 
 1--con imagenes cuando se hace --onefile pyinstaler crea un acarpeta temporal, en este caso es necesario para la ruta esto
 
+###añade al exe las carpetas ej
+pyinstaller --noconfirm --onefile --windowed --add-data "C:/Users/User/Desktop/dialogator/source/images;images/" --add-data "C:/Users/User/Desktop/dialogator/source;source/"  "C:/Users/User/Desktop/dialogator/script.py"
+
+###AL AÑADIR LAS CARPETAS AL CARPETA TEMPORAL DE PYINTSALLER NO HACE FALTA SUBIR IMAGEN POR IMAGEN O ARCHIVO POR ARCHIVO,PERO RECUERDA LUEGO PONER LA RURA BIEN COMO EN EL CODIGO DE BAJO EN AL LINEA 32
+
  def resource_path(self,filename):
            
             if hasattr(sys, '_MEIPASS'):
@@ -24,7 +29,7 @@ def bindCanvas_principal(self,event):
             try:
 
 
-                self.image1 = PIL.Image.open(self.resource_path(filename='fondo.jpg'))   ####se coge la ruta de la funcion que usara el try solo en el exe
+                self.image1 = PIL.Image.open(self.resource_path(filename='source/images/fondo.jpg'))   ####se coge la ruta de la funcion que usara el try solo en el exe
                 self.image1_resize = self.image1.resize((event.width, event.height), PIL.Image.ANTIALIAS)
                 self.image_new = PIL.ImageTk.PhotoImage(self.image1_resize)
                 self.canvas_principal.create_image(0,0, anchor='nw', image=self.image_new)

@@ -1,2 +1,32 @@
 pyinstaller namefile.py --onefile --windowed(solo si es por ejemplo como tkinter) --icon ./image.ico
 #la image ico al lado del archivo a ejecutar
+
+##si es mas facil usa auto-py-to-exe que es lomismo sin comandos
+
+1--con imagenes cuando se hace --onefile pyinstaler crea un acarpeta temporal, en este caso es necesario para la ruta esto
+
+ def resource_path(self,filename):
+           
+            if hasattr(sys, '_MEIPASS'):
+
+                return f'{os.path.join(sys._MEIPASS,filename )}'
+
+            else:
+
+                return f'{filename}'     
+
+
+
+        
+def bindCanvas_principal(self,event):
+
+
+            try:
+
+
+                self.image1 = PIL.Image.open(self.resource_path(filename='fondo.jpg'))   ####se coge la ruta de la funcion que usara el try solo en el exe
+                self.image1_resize = self.image1.resize((event.width, event.height), PIL.Image.ANTIALIAS)
+                self.image_new = PIL.ImageTk.PhotoImage(self.image1_resize)
+                self.canvas_principal.create_image(0,0, anchor='nw', image=self.image_new)
+
+                log.critical(self.resource_path(filename='fondo.jpg'))

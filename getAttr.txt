@@ -1,0 +1,14 @@
+class animal(prueba):
+
+        fofo = 'yes'
+
+        def __init__(self, nombre):
+            super().__init__(nombre)            
+
+           
+
+
+         
+ss = animal('sss')
+
+print(getattr(ss, "fofo", 'no encontrado')) >>>> yes, si no lo encontrara imprimiria no encontrado o lo que le pongas a tercer parametro

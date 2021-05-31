@@ -8,7 +8,7 @@ with open('C:\\Users\\USUARIO\\Desktop\\virtual1\\requirements.txt','a') as text
     text.close()    
 
 
-
+##images 'rb' or 'wb' ->read or write
 'r'	Abra un archivo para leerlo. (defecto)
 'w'	Abra un archivo para escribir. Crea un archivo nuevo si no existe o lo trunca si existe.
 'x'	Abra un archivo para creación exclusiva. Si el archivo ya existe, la operación falla.

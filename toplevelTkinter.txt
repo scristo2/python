@@ -1,0 +1,6 @@
+def create_widgets(self):
+
+  #toplevel crea una nueva ventana
+
+          self.aa = tk.Toplevel()
+          tk.Label(self.aa, text='test').pack()

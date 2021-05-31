@@ -1,0 +1,31 @@
+
+    "arrow"
+    "circle"
+    "clock"
+    "cross"
+    "dotbox"
+    "exchange"
+    "fleur"
+    "heart"
+    "heart"
+    "man"
+    "mouse"
+    "pirate"
+    "plus"
+    "shuttle"
+    "sizing"
+    "spider"
+    "spraycan"
+    "star"
+    "target"
+    "tcross"
+    "trek"
+    "watch"
+
+
+self.configure(cursor='watch')
+
+o lo puedes hacer dandole a un boton
+tk.Button(cursor='')
+
+o en unu funcion con el self.configure(cursor=)

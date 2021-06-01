@@ -3,3 +3,8 @@ self.attributes('-toolwindow', True) ##quita los dos botones,solo deja el de sal
 
 ####con esto quitas todo
 self.attributes('-fullscreen', True)
+
+
+
+################con esto desactivas todos los botones de minimizar,maximizar y cerrar y el mover la ventana
+aa.attributes('-disabled', True)

@@ -13,6 +13,20 @@ scroll = tk.Scrolbar(window
 scroll.pack(side=tk.LEFT, fill=tk.Y) #fill recierda qu ebotk, en Y, en X etc
 
 
+#########se coloca bien, ejemplo abajo del todo en la esquina derecha
+ self.frameAuthor.pack(side=tk.BOTTOM,anchor='sw')
+ 
+    NW
+    N
+    NE
+    W
+    CENTER
+    E
+    SW
+    S
+    SE
+
+
 elf.frame.pack()
 self.frame.pack_propagate(0)
 

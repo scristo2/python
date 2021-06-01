@@ -1,0 +1,1 @@
+ tk.Button(self, text='sss', command= lambda : self.wm_state('iconic')).pack()

@@ -6,5 +6,10 @@ self.attributes('-fullscreen', True)
 
 
 
-################con esto desactivas todos los botones de minimizar,maximizar y cerrar y el mover la ventana
+################con esto desactivas todos los botones de minimizar,maximizar y cerrar y el mover la ventana pero se ven
 aa.attributes('-disabled', True)
+
+###########ventana fija sin que se pueda mover la pantalla,y son que aparencan los botones,importatante despues de geometry o resizable es despues update_idletasks()
+
+ self.update_idletasks()
+ self.overrideredirect(True) ###esto es lo qu elo hace

@@ -16,7 +16,7 @@ scroll.pack(side=tk.LEFT, fill=tk.Y) #fill recierda qu ebotk, en Y, en X etc
 #########se coloca bien, ejemplo abajo del todo en la esquina derecha
  self.frameAuthor.pack(side=tk.BOTTOM,anchor='sw')
  
-    NW
+    NW 
     N
     NE
     W

@@ -18,7 +18,7 @@ scroll.pack(side=tk.LEFT, fill=tk.Y) #fill recierda qu ebotk, en Y, en X etc
  
     NW 
     N
-    NE
+    NE  
     W
     CENTER
     E

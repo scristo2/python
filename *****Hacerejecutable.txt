@@ -3,6 +3,10 @@ pyinstaller namefile.py --onefile --windowed(solo si es por ejemplo como tkinter
 
 ##si es mas facil usa auto-py-to-exe que es lomismo sin comandos
 
+
+####ACORDARSE QUE ES PARA TODO,HASTA EN SQLITE3,EJEMPLO CON LA FUNCION DE ABAJO
+connSqlite = sqlite3.connect(self.resource_path(filename='reference'))
+
 1--con imagenes cuando se hace --onefile pyinstaler crea un acarpeta temporal, en este caso es necesario para la ruta esto
 
 ###añade al exe las carpetas ej

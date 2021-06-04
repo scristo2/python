@@ -40,4 +40,4 @@ def bindCanvas_principal(self,event):
 
                 log.critical(self.resource_path(filename='fondo.jpg'))
 
-##--hay modulos que no los  encuentra,win10 da error, pero en su lugar usamos plyer y lo añadimos a --hidden import como plyer.platforms.win.notification en auto-py-to-exe o en pyinstaller,recordar que es lo mismo
+##--hay modulos que no los  encuentra,win10 da error, pero en su lugar usamos plyer y lo añadimos a --hidden import como plyer.platforms.win.notification en auto-py-to-exe o en pyinstaller,recordar que es lo mismo.

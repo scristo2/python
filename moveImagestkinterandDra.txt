@@ -1,0 +1,36 @@
+mejor con canvas create image
+
+self.tree1 = self.canvasMap.create_image(130, 130, anchor='center', image=self.tree)
+
+###para moverlas hazlo con un after y con canvas.move(self.tree, 10, 0) entoneces cada segundo que le pongas al after se movera 10
+ self.canvasMap.after(1000, self.movePlatillo) 
+ 
+def movePlatillo(self):
+
+
+        self.canvasMap.after(1000, self.movePlatillo)
+
+
+        self.currentWidht = self.winfo_screenwidth()
+        self.currentheight = self.winfo_screenheight()
+
+        self.listMetricsPlatilloX = []
+        self.listMetricsPlatilloY = []
+
+        for i in range(self.currentheight):
+
+            self.listMetricsPlatilloX.append(i)
+
+
+        for i in range(self.currentheight):
+
+            self.listMetricsPlatilloY.append(i)
+        
+        random.shuffle(self.listMetricsPlatilloX)
+        random.shuffle(self.listMetricsPlatilloY)
+
+
+        self.canvasMap.move(self.tree1, 10,0)
+
+    
+ 

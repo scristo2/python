@@ -32,5 +32,5 @@ def movePlatillo(self):
 
         self.canvasMap.move(self.tree1, 10,0)
 
-    
+    x
  

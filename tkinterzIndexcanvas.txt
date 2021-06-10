@@ -1,0 +1,2 @@
+self.canvasMap.tag_raise(self.tree1) or lower para que sea al reves
+##con raise es el predominante

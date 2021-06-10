@@ -1,0 +1,2 @@
+#el 0 es x y el 1 es y
+if int(self.canvasMap.coords(self.platillo1)[0]) 

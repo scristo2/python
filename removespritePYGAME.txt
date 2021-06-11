@@ -1,0 +1,30 @@
+sprites = sprite.Group()
+jugador = protagonist('source/images/city.png',display.get_surface().get_width(), display.get_surface().get_height(), (255, 0, 0), getsizescreen[0], getsizescreen[1], 0, 0, 'rojo')
+jugador1 = protagonist('source/images/mapa2.png',display.get_surface().get_width(), display.get_surface().get_height(), (0,0,255),getsizescreen[0], getsizescreen[1], 600, 0, 'azul')
+jugador3 = protagonist('source/images/chicken-brown.png', 100, 100, '', getsizescreen[0], getsizescreen[1], 100, 450, '')
+sprites.add(jugador, jugador1, jugador3)
+
+while crashedGame is False:
+
+        clock.tick(20)
+
+        for event in pygame.event.get():
+
+            ##if close game
+
+            if event.type == pygame.QUIT:
+
+                crashedGame = True
+
+            if event.type == pygame.KEYDOWN:
+
+                if event.key == pygame.K_UP:
+
+                    if jugador3.rect.y == 450:
+
+                        aas = image.load('source/images/vac-left.png').convert_alpha()
+                        aas = transform.scale(aas, (100, 100))
+
+                        jugador3.rect.y += -100
+                        #jugador3.image = aas
+                        sprites.remove(jugador3) #### lo puedes recupera con add

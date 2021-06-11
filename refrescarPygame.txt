@@ -1,0 +1,32 @@
+while crashedGame is False:
+
+
+        for event in pygame.event.get():
+
+            ##if close game
+
+            if event.type == pygame.QUIT:
+
+                crashedGame = True
+
+
+            if event.type == pygame.KEYDOWN:
+
+                if event.key == pygame.K_DOWN:
+
+                    pass
+
+            if event.type == event1:
+
+                print('hellow world')             
+    
+            
+
+    
+        pygame.display.flip()###uno u otro
+        pygame.display.update()
+        
+        display.flip() actualizará el contenido de toda la pantalla
+         display.update() permite actualizar una parte de la pantalla, en lugar de toda el área de la pantalla. Sin pasar argumentos, actualiza toda la pantalla
+       
+         

@@ -1,0 +1,38 @@
+ ##se pone fuera del for porque si no lo pone a lo cola el evento y tarda mas
+ for event in pygame.event.get():
+
+            ##if close game
+
+
+            if event.type == pygame.QUIT:
+
+                crashedGame = True
+
+
+            if event.type == pygame.KEYDOWN:
+
+                if event.key == pygame.K_UP:
+
+                     if jugador3.rect.y == (getsizescreen[1] - 150):
+
+                           jugador3.rect.y += -200
+                           time.set_timer(eventovueloGallina,500, True)
+
+
+            if event.type == eventovueloGallina:
+
+                jugador3.rect.y += 200
+        
+
+
+        keys = key.get_pressed()    
+
+
+        if keys[pygame.K_RIGHT]:
+
+                        jugador3.rect.x += 5
+
+        elif keys[pygame.K_LEFT]:
+
+                jugador3.rect.x += -5
+

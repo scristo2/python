@@ -1,0 +1,66 @@
+  ###cuando quieras que se mueva, gracia sal update del los sprites, acordarse de poner un fondo,como color o algo
+  
+  class protagonist(sprite.Sprite):
+
+        def __init__(self,width, height, color, widthScreen, heightScreen): #####es override el self.image,self.rect, importantisimo
+            super().__init__()
+            self.image = Surface((width, height))
+            self.image.fill(color)
+            self.rect = self.image.get_rect()
+            self.rect.center = (widthScreen / 2, heightScreen / 2)
+            self.heightScreen = heightScreen
+            
+
+
+
+        def update(self,):  ###esto es override
+
+            self.rect.y += 10
+
+            if self.rect.y > self.heightScreen:
+
+                self.rect.y = 0   
+
+
+            
+
+    pygame.init()
+
+    screen = display.set_mode((600, 600))
+
+    getsizescreen = display.get_surface().get_size()
+
+    display.set_caption('testeo')
+
+    crashedGame = False
+
+    clock = time.Clock()
+
+
+    sprites = sprite.Group()
+    jugador = protagonist(100, 100, (255, 0, 0), getsizescreen[0], getsizescreen[1])
+    sprites.add(jugador)
+    
+       
+
+    while crashedGame is False:
+
+        clock.tick(20)
+
+        for event in pygame.event.get():
+
+            ##if close game
+
+            if event.type == pygame.QUIT:
+
+                crashedGame = True      
+        
+        screen.fill((0, 102,0))
+        sprites.update()
+        sprites.draw(screen)
+        display.flip()        
+                    
+
+
+        ##create background
+            

@@ -1,0 +1,76 @@
+class protagonist(sprite.Sprite):
+
+        def __init__(self,pathImage,width, height, color, widthScreen, heightScreen, positionStartx, positionStartY, reference):
+            super().__init__()
+            self.aa = image.load(pathImage).convert_alpha()
+            self.aa = transform.scale(self.aa, (width, height))
+            self.image = self.aa
+            self.rect = self.image.get_rect(topleft=(positionStartx, positionStartY))
+            #self.rect.center = (widthScreen / 2, heightScreen / 2)
+            self.heightScreen = heightScreen
+            self.widthScreen = widthScreen
+            self.reference = reference
+        
+
+        def referenceFunction(self):
+
+            return self.reference
+      
+
+   
+
+    pygame.init()
+
+    screen = display.set_mode((600, 600))
+
+    getsizescreen = display.get_surface().get_size()
+
+    display.set_caption('testeo')
+
+    crashedGame = False
+
+    clock = time.Clock()
+
+
+    sprites = sprite.Group()
+    jugador = protagonist('source/images/city.png',display.get_surface().get_width(), display.get_surface().get_height(), (255, 0, 0), getsizescreen[0], getsizescreen[1], 0, 0, 'rojo')
+    jugador1 = protagonist('source/images/mapa2.png',display.get_surface().get_width(), display.get_surface().get_height(), (0,0,255),getsizescreen[0], getsizescreen[1], 600, 0, 'azul')
+    jugador3 = protagonist('source/images/chicken-brown.png', 100, 100, '', getsizescreen[0], getsizescreen[1], 100, 450, '')
+    sprites.add(jugador, jugador1, jugador3)
+    
+
+    
+
+    while crashedGame is False:
+
+        clock.tick(20)
+
+        for event in pygame.event.get():
+
+            ##if close game
+
+            if event.type == pygame.QUIT:
+
+                crashedGame = True
+
+            if event.type == pygame.KEYDOWN:
+
+                if event.key == pygame.K_DOWN:
+
+                    jugador.rect.x += -1
+                    jugador1.rect.x += -1          
+        
+        screen.fill((0, 102,0))
+        sprites.update()
+        sprites.draw(screen)
+        display.flip()        
+                    
+
+
+        ##create background
+            
+      
+
+except ModuleNotFoundError as err:
+
+    notification.notify(title='error', message='los archivos estan corruptos y no se puede ejcutar el archivo,elimenelo y vuelvalo a instalar.')

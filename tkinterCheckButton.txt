@@ -1,0 +1,67 @@
+  ####cuando solo puedes hacer clcik en una, mas abjao hay mas
+  
+  def quizas(self):
+
+            if self.spanish.get() == 0:
+
+                print('español')
+
+            elif self.spanish.get() == 1:
+
+                print('ingles')
+
+            elif self.spanish.get() == 2:
+
+                print('frances')        
+
+
+        def create_widgets(self):
+
+           self.spanish = tk.IntVar() ##ahora vale 0, si hace clcik en la que tenga esta, en variable pues suma 1
+
+           languages = ['español', 'ingles', 'frances']
+
+           xx = []
+
+           for i in range(3):
+
+               xx.append(tk.Checkbutton(self, text=languages[i], variable=self.spanish, onvalue=i, offvalue=5).pack())
+                         
+
+
+           self.xx = tk.Button(self, text='coger', command=self.quizas)
+           self.xx.pack()
+           
+           ##cuando puedes elegir muchas
+           def quizas(self):
+
+            if self.spanish.get() == 1:
+
+                print('español')
+
+
+
+            if self.spanish1.get() == 1:
+
+                print('ingles')
+
+
+
+            if self.spanish.get() == 0 and self.spanish1.get() == 0:
+
+                messagebox.showerror(title='error', message='tienes que elegir al menos una opcion')               
+
+
+        def create_widgets(self):
+
+           self.spanish = tk.IntVar()
+
+           self.aa = tk.Checkbutton(self, text='español', variable=self.spanish).pack()
+
+           self.spanish1 = tk.IntVar()
+
+           self.bb = tk.Checkbutton(self, text='ingles', variable=self.spanish1).pack()
+
+
+           self.xx = tk.Button(self, text='coger', command=self.quizas)
+           self.xx.pack()

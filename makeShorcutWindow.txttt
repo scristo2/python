@@ -1,9 +1,13 @@
  import winshell
  ####pip install winshell
  ##si da error,instala el modulo que ponga
- winshell.CreateShortcut(
-      Path=os.path.join(desktop(), "PythonI.lnk"), ##donde lo guardas y el nombre, acordarse que desktop() es una funcion que da el escriorio de cualquiero ordenador
-      dentro de winshell, 
-      Target=r"c:\python39\python.exe",
-       Description="Python Interpreter"
-)
+ try:
+    
+      winshell.CreateShortcut(Path=os.path.join('ssshos', "ejemplo.lnk"),Target=str(os.path.join(desktop(), 'juegos')), Description="Python Interpreter")
+
+      print('eureka')
+
+
+    except Exception as err:
+
+        print(err)

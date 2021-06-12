@@ -1,0 +1,5 @@
+import winshell
+
+test = winshell.folder('profile')
+print(test)
+>>>>>>c:\\Users\%username%

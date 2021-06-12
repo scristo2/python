@@ -6,8 +6,8 @@ import winshell
 
       aa = winshell.move_file(
 
-        source_path=desktop(),  ##donde
-        target_path=os.path.join(desktop(), 'eso', 'errores.log'), ##el archivo a mover
+        source_path=desktop(),  ##el archivo que quieres  cambiar
+        target_path=os.path.join(desktop(), 'eso', 'errores.log'), ##destino
       )
 
 

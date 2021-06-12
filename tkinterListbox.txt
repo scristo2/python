@@ -11,7 +11,8 @@
 
         def create_widgets(self):
 
-          self.aa = tk.Listbox(self)
+          self.aa = tk.Listbox(self) ##para el tamaño pon 1 d eheight y le pones un boton que cuando haga clcik con el height de nuemro de elementos,
+          o haces un scroll,pero fuera del listbox ya que no se puede dentro
 
           self.languages = ['ingles', 'español', 'frances', 'aleman', 'italiano', 'georgia', 'gales', 'china', 'japon', 'noruega', 'finlandia', 'polonia', 'suiza',
           'suecia', 'inglaterra']

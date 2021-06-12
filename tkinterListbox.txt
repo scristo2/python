@@ -1,4 +1,4 @@
-
+###hay mas abajo
         def delete(self):
 
             self.aa.delete(tk.ANCHOR) ##BORRA LA SELECCIONADA
@@ -27,3 +27,25 @@
 
           self.answer = tk.Button(self, text='get', command=self.quizas).pack()
           self.deletebutton = tk.Button(self, text='delete', command=self.delete).pack()  
+          
+###con scroll
+def create_widgets(self):
+
+
+          self.frame = tk.Frame(self)  
+
+          self.aa = tk.Listbox(self.frame, height=7)
+          self.scroll = tk.Scrollbar(self.frame, orient='vertical',command=self.aa.yview,)
+
+          self.languages = ['ingles', 'español', 'frances', 'aleman', 'italiano', 'georgia', 'gales', 'china', 'japon', 'noruega', 'finlandia', 'polonia', 'suiza',
+          'suecia', 'inglaterra']
+
+          for i in range(len(self.languages)):
+
+              self.aa.insert(tk.END,self.languages[i])
+          
+          self.aa.config(yscrollcommand=self.scroll.set)
+          self.aa.pack(side=tk.LEFT, anchor='nw')
+          self.scroll.pack(side=tk.LEFT, anchor='nw', fill=tk.Y)
+          self.frame.config(bg='#000000')
+          self.frame.pack(side=tk.LEFT, anchor='nw')

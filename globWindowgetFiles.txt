@@ -1,0 +1,7 @@
+import glob ### ecuentra todos los nombres con un patron
+
+test1 = winshell.desktop()
+print(test1)
+for glob in glob.glob(os.path.join(test1, '*.exe')):
+
+     print(glob)

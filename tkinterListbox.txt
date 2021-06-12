@@ -1,0 +1,28 @@
+
+        def delete(self):
+
+            self.aa.delete(tk.ANCHOR) ##BORRA LA SELECCIONADA
+
+
+        def quizas(self):
+
+           print(self.aa.get(tk.ANCHOR))   #coge el valor de la seleccionada            
+
+
+        def create_widgets(self):
+
+          self.aa = tk.Listbox(self)
+
+          self.languages = ['ingles', 'español', 'frances', 'aleman', 'italiano', 'georgia', 'gales', 'china', 'japon', 'noruega', 'finlandia', 'polonia', 'suiza',
+          'suecia', 'inglaterra']
+
+          for i in range(len(self.languages)):
+
+              self.aa.insert(tk.END,self.languages[i]) ##puedes poner end, pero tambien un numero como index,si pones en una end y en otra 3por ejemplo,la 3 ira antes
+
+         
+          self.aa.pack()
+
+
+          self.answer = tk.Button(self, text='get', command=self.quizas).pack()
+          self.deletebutton = tk.Button(self, text='delete', command=self.delete).pack()  

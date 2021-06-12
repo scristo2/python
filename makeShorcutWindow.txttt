@@ -1,0 +1,8 @@
+ import winshell
+ ####pip install winshell
+ ##si da error,instala el modulo que ponga
+ winshell.CreateShortcut(
+      Path=os.path.join(desktop(), "PythonI.lnk"),
+      Target=r"c:\python39\python.exe",
+       Description="Python Interpreter"
+)

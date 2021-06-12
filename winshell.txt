@@ -1,0 +1,7 @@
+import winshell
+##si da error pip install con el moculo que pida
+
+test = winshell.folder('profile') <<<< c:\Users\%username%
+print(test)
+test1 = winshell.desktop() <<<<< c:\Users\%username%\desktop
+print(test1)

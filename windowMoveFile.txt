@@ -1,0 +1,18 @@
+import winshell
+    import sys
+    import os      
+
+    try:
+
+      aa = winshell.move_file(
+
+        source_path=desktop(),  ##donde
+        target_path=os.path.join(desktop(), 'eso', 'errores.log'), ##el archivo a mover
+      )
+
+
+    
+
+    except winshell.x_winshell as err:
+
+        print('no se h apodido')   

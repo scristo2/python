@@ -27,6 +27,7 @@
 
          
           self.aa.pack()
+          
 
 
           self.answer = tk.Button(self, text='get', command=self.quizas).pack()

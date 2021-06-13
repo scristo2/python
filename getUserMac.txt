@@ -1,0 +1,3 @@
+user = os.path.join(os.path.expanduser("~"))
+    
+    print(user)

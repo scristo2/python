@@ -1,2 +1,2 @@
 C: \ ProgramData \ Microsoft \ Windows \ Menú Inicio
-##acoradse cuando se haga, que solo se pude hacer con shorcut,bien solo o en una carpeta
+##acoradse cuando se haga, que solo se pude hacer con shorcut,bien solo o en una carpeta,si no hay shorcut,no aparece nada

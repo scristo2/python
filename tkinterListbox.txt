@@ -13,6 +13,10 @@
 
           self.aa = tk.Listbox(self) ##para el tamaño pon 1 d eheight y le pones un boton que cuando haga clcik con el height de nuemro de elementos,
           o haces un scroll,pero fuera del listbox ya que no se puede dentro
+          
+          ######primera siempre valor por defecto, en este caso el index 0 y la segunda es para que quede marcado con color el por defecto
+          self.aa.select_anchor(0)###ALWAYS
+          self.aa.select_set(0)##only color select
 
           self.languages = ['ingles', 'español', 'frances', 'aleman', 'italiano', 'georgia', 'gales', 'china', 'japon', 'noruega', 'finlandia', 'polonia', 'suiza',
           'suecia', 'inglaterra']

@@ -1,0 +1,9 @@
+import os
+    import sys
+    import glob
+
+    desktop = os.path.join(os.path.expanduser("~"), 'desktop')
+
+    for glob in glob.glob(os.path.join(desktop, '*.png')):
+
+        print(glob) >>>imprime todas las png del escritorio

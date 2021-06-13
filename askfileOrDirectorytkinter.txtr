@@ -1,0 +1,11 @@
+from tkinter import filedialog
+
+###directory
+def nextcommand(self):
+
+            self.cc = filedialog.askdirectory()
+
+
+            if self.cc:
+
+                print(self.cc)

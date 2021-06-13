@@ -1,0 +1,6 @@
+import os
+    import sys
+    import glob
+    import shutil 
+    user = os.path.join(os.path.expanduser("~"), 'desktop')  #file ,destination
+    

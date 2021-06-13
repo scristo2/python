@@ -1,0 +1,5 @@
+print(os.stat(__file__)[6]) ##dice el tamaño del archvio
+
+print(os.stat(__file__))
+
+<<<<<<s.stat_result(st_mode=33188, st_ino=7836811, st_dev=16777223, st_nlink=1, st_uid=501, st_gid=20, st_size=575, st_atime=1623598507, st_mtime=1623598506, st_ctime=1623598506)

@@ -1,0 +1,1 @@
+a = os.path.join(winshell.folder('profile'), 'Appdata', 'Roaming', 'Microsoft', 'Internet Explorer', 'Quick Launch', 'User Pinned', 'Taskbar')

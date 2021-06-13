@@ -3,8 +3,10 @@
  ##si da error,instala el modulo que ponga
  try:
     
-      winshell.CreateShortcut(Path=os.path.join('ssshos', "ejemplo.lnk"),Target=str(os.path.join(desktop(), 'juegos')), Description="Python Interpreter")
-
+     winshell.CreateShortcut(Path=os.path.join(winshell.desktop(), 'setupgame', 'source', "ejemplo.lnk"),Target=str(os.path.join(winshell.desktop(), 'setupgame')), Description="Python Interpreter")
+     
+     ##el primero es donde se guarda el archivo,en una carpeta que exista y con el nombre que quieras, y el segundo es donde se va va cuando se hase click en el shorcut
+     
       print('eureka')
 
 

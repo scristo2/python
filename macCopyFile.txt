@@ -1,0 +1,10 @@
+ 
+    try:
+        
+        user = os.path.join(os.path.expanduser("~"), 'desktop')
+        aa = shutil.copy(os.path.join(user,'iberdrola.txt'), os.path.join(user,'socket')) ###archvoa copiar y como segundo parametro es el destino
+
+    except FileNotFoundError as err:
+
+        print('ssss')
+    

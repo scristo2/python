@@ -1,0 +1,13 @@
+import winshell
+    import sys
+    import os      
+
+    try:
+
+      winshell.copy_file(os.path.join('readme.MD'), os.path.join('source','readssme.MD')) ###primero el archico que quieres mover, el segundo donde va y con que nombre
+
+    
+
+    except winshell.x_winshell as err:
+
+        print('no se h apodido')   

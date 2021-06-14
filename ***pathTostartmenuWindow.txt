@@ -1,2 +1,5 @@
 C: \ ProgramData \ Microsoft \ Windows \ Microsoft\Windows\Start Menu \Programs
 ##acoradse cuando se haga, que solo se pude hacer con shorcut,bien solo o en una carpeta,si no hay shorcut,no aparece nada
+  aa = os.path.join('C:/ProgramData/Microsoft/Windows/Start Menu/Programs/')
+
+    winshell.move_file(os.path.join(winshell.folder('profile'), 'desktop', 'cus.lnk'),aa)

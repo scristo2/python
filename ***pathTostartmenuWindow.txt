@@ -1,2 +1,2 @@
-C: \ ProgramData \ Microsoft \ Windows \ Menú Inicio
+C: \ ProgramData \ Microsoft \ Windows \ Microsoft\Windows\Start Menu \Programs
 ##acoradse cuando se haga, que solo se pude hacer con shorcut,bien solo o en una carpeta,si no hay shorcut,no aparece nada

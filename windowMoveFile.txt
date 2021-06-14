@@ -4,12 +4,7 @@ import winshell
 
     try:
 
-      aa = winshell.move_file(
-
-        source_path=desktop(),  ##el archivo que quieres  cambiar
-        target_path=os.path.join(desktop(), 'eso', 'errores.log'), ##destino
-      )
-
+      winshell.move_file(os.path.join('readme.MD'), os.path.join('source','readssme.MD')) ###primero el archico que quieres mover, el segundo donde va y con que nombre
 
     
 

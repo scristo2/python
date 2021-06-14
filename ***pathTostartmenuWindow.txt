@@ -3,3 +3,4 @@ C: \ ProgramData \ Microsoft \ Windows \ Microsoft\Windows\Start Menu \Programs
   aa = os.path.join('C:/ProgramData/Microsoft/Windows/Start Menu/Programs/')
 
     winshell.move_file(os.path.join(winshell.folder('profile'), 'desktop', 'cus.lnk'),aa)
+  

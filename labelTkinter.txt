@@ -1,0 +1,2 @@
+###acoradarse que si se que quiere cambiar de renglon solo con \n ya esta,pegado a la palabra y luego usar justify center,right or  left
+self.title1Step1 = tk.Label(self.frameFunctionsStep1, text='Welcome to the Testeo Game v0.0.1\nSetup', font='Helvetica 15', justify=tk.LEFT)

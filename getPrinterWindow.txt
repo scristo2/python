@@ -1,0 +1,97 @@
+print(win32print.EnumPrinters(win32print.PRINTER_ENUM_NAME, None,2))##el ultimo puede ser 1,2 4, 5 ver esta ficha
+###http://timgolden.me.uk/pywin32-docs/win32print.html
+Métodos
+OpenPrinter
+Recupera un asa de una impresora. 
+GetPrinter
+Recupera información sobre una impresora 
+Impresora
+Cambia la configuración y el estado de la impresora 
+CerrarImpresora
+Cierra una manija a una impresora. 
+AddPrinterConnection
+Se conecta a una impresora de red. 
+DeletePrinterConnection
+Se desconecta de una impresora de red. 
+EnumPrinters
+Enumera impresoras, servidores de impresión, dominios y proveedores de impresión. 
+GetDefaultPrinter
+Devuelve la impresora predeterminada. 
+GetDefaultPrinterW
+Devuelve la impresora predeterminada. 
+SetDefaultPrinter
+Establece la impresora predeterminada. 
+SetDefaultPrinterW
+Establece la impresora predeterminada. 
+StartDocPrinter
+Notifica a la cola de impresión que un documento se va a poner en cola para su impresión. Devuelve el Jobid del trabajo iniciado. 
+EndDocPrinter
+La función EndDocPrinter finaliza un trabajo de impresión para la impresora especificada. 
+AbortPrinter
+Elimina el archivo de cola de la impresora 
+StartPagePrinter
+Notifica a la cola de impresión que se va a imprimir una página en la impresora especificada 
+EndPagePrinter
+Finaliza una página en un trabajo de impresión 
+StartDoc
+Empieza a poner en cola un trabajo de impresión en un contexto de dispositivo de impresora 
+EndDoc
+Detiene la puesta en cola de un trabajo de impresión en el contexto de un dispositivo de impresora 
+AbortDoc
+Cancela el trabajo de impresión en el contexto de un dispositivo de impresora 
+Página de inicio
+Inicia una página en el contexto de un dispositivo de impresora 
+EndPage
+Finaliza una página en el contexto de un dispositivo de impresora 
+WritePrinter
+Copia los bytes especificados en la impresora especificada. StartDocPrinter y EndDocPrinter deben llamarse antes y después. Devuelve el número de bytes escritos en la impresora. 
+EnumJobs
+Enumera los trabajos de impresión en la impresora especificada. 
+Conseguir trabajo
+Devuelve un diccionario de información sobre un trabajo de impresión específico. 
+SetJob
+Pausar, cancelar, reanudar, establecer niveles de prioridad en un trabajo de impresión. 
+Propiedades del documento
+Cambia la configuración de la impresora 
+EnumPrintProcessors
+Enumere los proveedores de impresoras para el servidor y el entorno especificados 
+EnumPrintProcessorDatatypes
+Enumera los tipos de datos que admite el proveedor de impresión especificado 
+EnumPrinterDrivers
+Muestra los controladores de impresora instalados 
+EnumForms
+Enumera formularios para una impresora 
+AddForm
+Agrega un formulario para una impresora 
+DeleteForm
+Elimina un formulario definido para una impresora 
+GetForm
+Recupera información sobre un formulario definido 
+SetForm
+Cambiar la información de un formulario 
+AddJob
+Agrega un trabajo para ponerlo en cola a una cola de impresión 
+ScheduleJob
+Programa la impresión de un trabajo en cola 
+Capacidades del dispositivo
+Consulta a una impresora por sus capacidades. 
+GetDeviceCaps
+Recupera parámetros y configuraciones específicos del dispositivo 
+EnumMonitors
+Enumera los monitores de puertos de impresora instalados 
+EnumPorts
+Muestra los puertos de impresora en un servidor 
+GetPrintProcessorDirectory
+Devuelve el directorio donde residen los archivos del procesador de impresión. 
+GetPrinterDriverDirectory
+Devuelve el directorio donde están instalados los controladores de impresora. 
+Agregar impresora
+Agrega una nueva impresora en un servidor 
+DeletePrinter
+Elimina una impresora existente 
+DeletePrinterDriver
+Elimina el controlador especificado de un servidor 
+DeletePrinterDriverEx
+Elimina un controlador de impresora y archivos asociados 
+Impresora al ras
+Borra la impresora del estado de error si WritePrinter falla 

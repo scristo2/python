@@ -1,0 +1,40 @@
+if __name__ == "__main__":
+
+
+  ######acordarse que el cuarto argumento, es '', porque es un ejecutable y no lleva argumentoos en sys.argv
+  ###esto se hace como un portal, se abre otro archivo como admin y este se cierra con el sys.exit()
+
+    from plyer import notification
+    import ctypes
+    import sys
+    import subprocess
+    import os
+    import winshell
+
+    try:
+
+         from source import *
+
+         def is_admin():
+
+          try:
+              
+              return ctypes.windll.Shell32.IsUserAnAdmin()
+          except:
+
+              return False
+
+         if is_admin():
+
+            pass
+
+         else:
+               # Re-run the program with admin rights
+             ctypes.windll.Shell32.ShellExecuteW(None, "runas", os.path.join(winshell.desktop(), 'testeogame.exe'), '', None, 1)
+
+             sys.exit()
+        
+
+    except ModuleNotFoundError as err:
+
+         notification.notify(title='error', message='El archivo no se puede ejecutar ya que esta corrupto, desinstalelo y vuelvalo a instalar', timeout=20)   

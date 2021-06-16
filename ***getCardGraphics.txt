@@ -1,0 +1,18 @@
+***getCardGraphics.txt
+import wmi
+
+
+controller = wmi.WMI().Win32_VideoController()
+
+print(controller[0]) <<<imprime todo
+
+for i in controller:
+
+    controllerinfo = {
+
+        'name': i.wmi_property('Name').value 
+    }
+
+
+
+print(controllerinfo['name']) <<<<imprime el nombre

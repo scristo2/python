@@ -1,0 +1,3 @@
+impor winshell
+
+aa = winshell.desktop()

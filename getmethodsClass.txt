@@ -1,0 +1,11 @@
+ class persona:
+
+       def hablar(self,msg):return msg
+
+       def saludar(self, msg): return msg 
+
+       def coger(self, msg):return msg
+       
+       
+ aa = [method for method in dir(persona) if method.startswith('_') is False]
+ <<<<< coger, hablar, saludar

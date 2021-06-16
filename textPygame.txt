@@ -1,0 +1,37 @@
+pygame.init()
+screen = display.set_mode((600, 600))
+
+screen.fill('#000000')
+
+clock = time.Clock()
+crashgame = False
+
+aa = font.SysFont("monospace", 32)
+
+
+x = 200
+y = 200
+
+
+while crashgame is False:
+
+    screen.fill("#000000")  #####muy importante si se pone el texto en la principal o surface,para que se cambie el texto o la posicion hay que repintar
+
+    for events in event.get():
+
+        if events.type == pygame.QUIT:
+
+            crashgame = True
+
+
+        if events.type == pygame.KEYDOWN:
+
+            if events.key == pygame.K_DOWN:
+
+                x += 20
+    
+   
+    texta = aa.render(str(x), True, '#ffffff') 
+    screen.blit(texta, (x, y))
+    display.update()
+    clock.tick(40)        

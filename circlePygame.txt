@@ -1,0 +1,1 @@
+ self.aa = draw.circle(self.image, 'red', (50, 50), 50, 55) ##en (x, y), radio y el contorno, si le pones la mitad del radio, hace un donuts 

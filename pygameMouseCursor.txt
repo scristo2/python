@@ -27,3 +27,4 @@
                     if self.mousePressed[2]:
 
                         print('right')           
+ 

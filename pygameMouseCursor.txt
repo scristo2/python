@@ -1,3 +1,5 @@
+ print(mouse.get_focused()) ##si el raton esta dentro de la ventana, si s fullscreen, pues siempra da true
+ 
  ##asi es solo un click,si lo que quieres es que funcione manteniendolo pulsados cualquier boton del raton,haz lo mismo pero sacalo del for y dentro del eveent mousedown
  while self.crashgame is False:
 

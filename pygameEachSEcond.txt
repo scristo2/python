@@ -1,4 +1,4 @@
- event1 = USEREVENT + 1 ####le damos un nombre al evento
+ event1 = USEREVENT + 1 ####le damos un nombre al evento, solo puede haber 9 eventos,el resto son de pygaeme, desde +0 hasta +9
  time.set_timer(event1, 1000)  #####lo va  ahacer cada segundo ##si le pones un 0 se quita y si le pones como tercer argumento true, solo se hace una vez      
 
     while crashedGame is False:

@@ -1,5 +1,5 @@
  event1 = USEREVENT + 1 ####le damos un nombre al evento
-       
+ time.set_timer(event1, 1000)  #####lo va  ahacer cada segundo ##si le pones un 0 se quita y si le pones como tercer argumento true, solo se hace una vez      
 
     while crashedGame is False:
 
@@ -16,7 +16,7 @@
 
                 if event.key == pygame.K_DOWN:
 
-                    pass
+                    time.set_timer(event2, 0) ##se quita
 
             if event.type == event1: ###el evento cada segundo
 
@@ -28,4 +28,3 @@
         player_rect = player.get_rect(topleft=((player_rect.left - 1), player_rect.top))
         display.flip()
         clock.tick(40)
-        time.set_timer(event1, 1000)  #####lo va  ahacer cada segundo ##si le pones un 0 se quita y si le pones como tercer argumento true, solo se hace una vez

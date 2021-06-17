@@ -8,7 +8,7 @@
                 if events.type == pygame.QUIT:
 
                    self.crashgame = True
-
+ 
 
                 if events.type == pygame.MOUSEBUTTONDOWN:
 

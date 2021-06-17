@@ -1,0 +1,29 @@
+ ##asi es solo un click,si lo que quieres es que funcione manteniendolo pulsados cualquier boton del raton,haz lo mismo pero sacalo del for y dentro del eveent mousedown
+ while self.crashgame is False:
+
+            self.screen.fill(Color(255, 0, 123))
+
+            for events in event.get():
+
+                if events.type == pygame.QUIT:
+
+                   self.crashgame = True
+
+
+                if events.type == pygame.MOUSEBUTTONDOWN:
+
+                    self.mousePressed = mouse.get_pressed()
+
+                    if self.mousePressed[0]:
+
+                        ##left mouse
+                        print('left')
+
+                    if self.mousePressed[2]:
+                          ##center
+                        print('center')    
+
+
+                    if self.mousePressed[2]:
+
+                        print('right')           

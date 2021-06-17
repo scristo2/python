@@ -6,7 +6,7 @@ screen.fill('#000000')
 clock = time.Clock()
 crashgame = False
 
-aa = font.SysFont("monospace", 32)
+aa = font.SysFont("monospace", 32) ##donde monospace hay muchas fuentes,puedes recorrelas con un for,en mac tardan mucho en cargar las fuentes
 
 
 x = 200

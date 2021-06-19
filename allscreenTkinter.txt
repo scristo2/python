@@ -1,0 +1,17 @@
+ class window(tk.Tk):
+
+        def __init__(self) -> None:
+            super().__init__()
+            self.title('Poker Earn')
+            self.iconbitmap(sori.getPathExe(filename=sori.getPathExe('source/images/ultimate.ico')))
+            self.x = 0
+            self.y = 0
+            self.wx = self.winfo_screenwidth()
+            self.wy = self.winfo_screenheight()
+            #self.geometry('%dx%d'%(self.wx, self.wy))
+            #self.overrideredirect(True)
+            self.protocol('WM_DELETE_WINDOW', self.closeApp)
+            self.attributes('-fullscreen', True) #######this
+            self.update_idletasks()
+            self.create_widgets()
+            self.mainloop()

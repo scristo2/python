@@ -4,14 +4,32 @@ import speech_recognition as sr
 if __name__ == '__main__':
 
   
-  r = sr.Recognizer() 
+for index, name in enumerate(sr.Microphone.list_microphone_names()):
+    print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name)) ##show all devices sounds with index position
+
+
+inital = time.time_ns()
+r = sr.Recognizer() 
  
-with sr.Microphone() as source:
+with sr.Microphone() as source:  ###with the list yoy can choose the sound sevecice witj device_index=ej 1
     print('Speak Anything : ')
-    audio = r.listen(source)
- 
+
     try:
-        text = r.recognize_google(audio, language="es-ES")
-        print('You said: {}'.format(text))
-    except:
-        print('Sorry could not hear')  
+       audio = r.listen(source, timeout=3)  
+
+    except sr.WaitTimeoutError:
+
+        print('no has dicho nada')
+
+
+    else:
+
+        try:
+
+            text = r.recognize_google(audio, language='es-ES')
+            print('You said: {}'.format(text))
+
+        except:
+
+              print('no se ha podido traducir')   
+                

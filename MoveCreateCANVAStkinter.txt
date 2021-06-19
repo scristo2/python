@@ -1,0 +1,15 @@
+ ####importante tagbind, el nombre de l avariable de la creacion dentro del canvas, vale para todos los create canvas
+ 
+ self.table = tk.Canvas(self, width=300, height=300, bg='green', highlightthickness=0)
+
+            self.listImagesCards = [self.returnImageCards('source/images/asCorazones.png', 130, 80), self.returnImageCards('source/images/asPicas.jpg', 130, 80)]
+            
+            
+            self.asCorazones = self.table.create_image(10, 10, image=self.listImagesCards[0], anchor='nw')
+            self.asPicas = self.table.create_image(150, 10, image=self.listImagesCards[1], anchor='nw')
+ 
+            
+            self.table.pack(fill=tk.BOTH, expand='yes')
+
+            self.table.tag_bind(self.asCorazones, '<B1-Motion>', lambda event, card='asCorazones': self.moveCard(event, card))
+            self.table.tag_bind(self.asPicas, '<B1-Motion>', lambda event ,card='aspicas':  self.moveCard(event, card) ) 

@@ -1,0 +1,4 @@
+#####
+--first download hombrew https://brew.sh/index_es
+--brew install portaudio in folders path
+--pip install pyaudio

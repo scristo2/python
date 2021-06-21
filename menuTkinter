@@ -26,3 +26,7 @@ def createmenu(self):
 #get text label menu
 
  print(self.menubar.entrycget(2, 'label'))
+
+
+##change text menu
+ self.start.entryconfig(0, label='parar')

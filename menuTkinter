@@ -35,6 +35,6 @@ def createmenu(self):
 ##delete command menu
  self.start.delete(1)  ##index position 
 
-###disabled or enabled
+###disabled or normal(not enabled,yoy have to write 'normal')
 self.start.entryconfig(0, state='disabled')
  

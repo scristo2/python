@@ -24,3 +24,4 @@ for i, j in enumerate(aa):
     en la posicion 2 esta wdnesday
   
   
+  

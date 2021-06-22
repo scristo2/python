@@ -11,3 +11,14 @@ aa = [111]
    
    remove('hola')->en este caso elmina hola del array, si no esta lanza error
    .pop(1)->elima el array por index, es decir pos posicon en el array
+ 
+ 
+ aa = ['monday', 'tesuday', 'wednesady']
+
+for i, j in enumerate(aa):
+
+    print('en la posicion %d esta %s'%(i, j))
+    
+    <<<<<<<<<<<<en la posicion 0 esta monday
+    en la posicion 1 esta tuesday
+    en la posicion 2 esta wdnesday

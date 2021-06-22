@@ -22,3 +22,4 @@ for i, j in enumerate(aa):
     <<<<<<<<<<<<en la posicion 0 esta monday
     en la posicion 1 esta tuesday
     en la posicion 2 esta wdnesday
+  

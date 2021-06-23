@@ -24,4 +24,11 @@ for i, j in enumerate(aa):
     en la posicion 2 esta wdnesday
   
   
+###insert index at 0 or another position  
   
+  
+aa = ['monday', 'tuesday']
+
+aa. insert(0, 'sanday')
+
+print(aa)

@@ -1,0 +1,3 @@
+bounds = self.table.bbox(self.asRombos) ##table is canvas principal and self.asrombos is a create image
+width = bounds[2] - bounds[0]
+height = bounds[3] - bounds[1]

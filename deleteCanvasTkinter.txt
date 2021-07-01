@@ -1,0 +1,2 @@
+self.image1 = self.create_image(********)
+self.delete(self.image1)

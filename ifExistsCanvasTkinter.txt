@@ -1,0 +1,5 @@
+self.image1 = self.create_image(*****)
+
+if self.image1 in self.find_all():
+    
+    ++++++

@@ -1,3 +1,6 @@
+###minsize
+self.minsize(width=x, height=y)
+
 self.resizable(width=0, height=0) ##quitar boton maximizar
 self.attributes('-toolwindow', True) ##quita los dos botones,solo deja el de salir
 

@@ -1,3 +1,4 @@
+##acordarse en window que es window + r y poner iexpress
 pyinstaller namefile.py --onefile --windowed(solo si es por ejemplo como tkinter) --icon ./image.ico
 #la image ico al lado del archivo a ejecutar
 
